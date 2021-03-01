@@ -246,6 +246,7 @@ class MpcAsfTool: public wxFrame
 		void OnExportToGif(wxCommandEvent &event);
 		void OnExportToPng(wxCommandEvent &event);
 		void OnBat(wxCommandEvent &event);
+		void OnBatGenerate(wxCommandEvent &event);
 		void OnShowFile(wxCommandEvent &event);
 		void OnExit(wxCommandEvent &event);
 		void PreviousFrame(wxCommandEvent &event);
@@ -301,6 +302,7 @@ class MpcAsfTool: public wxFrame
             ID_TRAVESAL,
             ID_RETURN,
             ID_BAT,
+            ID_BATGEN,
             ID_BAT_PIC_CANCLE,
             ID_ANIMATE_TIMER,
             ID_SHOWHIDE_FILEEXPLORER,
