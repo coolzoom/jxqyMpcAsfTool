@@ -13235,7 +13235,7 @@
 	"wx/iosfwrap.h"
 	"wx/crt.h"
 
-1384175916 c:\wxwidgets-3.0.0\include\wx\defs.h
+1614613041 c:\wxwidgets-3.0.0\include\wx\defs.h
 	"wx/platform.h"
 	"wx/version.h"
 	"wx/dlimpexp.h"
@@ -14405,7 +14405,7 @@
 
 1614522689 f:\wowserver\source\jxqympcasftool\mydefs.hpp
 
-1614569662 f:\wowserver\source\jxqympcasftool\freeimage\dist\include\freeimage.h
+1614609549 f:\wowserver\source\jxqympcasftool\freeimage\dist\include\freeimage.h
 	<wchar.h>
 	<inttypes.h>
 
@@ -14639,7 +14639,7 @@
 
 1384175916 c:\wxwidgets-3.0.0\include\wx\os2\msgdlg.h
 
-1614563077 source:f:\wowserver\source\jxqympcasftool\adjustpositiondialog.cpp
+1614611641 source:f:\wowserver\source\jxqympcasftool\adjustpositiondialog.cpp
 	"wx/dcbuffer.h"
 	<wx/string.h>
 
@@ -14983,7 +14983,7 @@
 
 1384175916 c:\wxwidgets-3.0.0\include\wx\os2\filedlg.h
 
-1614522689 source:f:\wowserver\source\jxqympcasftool\gifdata.cpp
+1614575438 source:f:\wowserver\source\jxqympcasftool\gifdata.cpp
 	"wx/log.h"
 	<cstring>
 	<cstdlib>
@@ -15002,7 +15002,7 @@
 	"wx/filename.h"
 	<cstdlib>
 
-1614522689 f:\wowserver\source\jxqympcasftool\mapicdata.hpp
+1614617196 f:\wowserver\source\jxqympcasftool\mapicdata.hpp
 	"wx/string.h"
 	"wx/colour.h"
 	"wx/gdicmn.h"
@@ -16596,7 +16596,7 @@
 	<os2.h>
 	<pmstddlg.h>
 
-1614522689 f:\wowserver\source\jxqympcasftool\adjustpositiondialog.h
+1614611646 f:\wowserver\source\jxqympcasftool\adjustpositiondialog.h
 	"wx/image.h"
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -16685,7 +16685,7 @@
 	<wx/button.h>
 	<wx/dialog.h>
 
-1614522689 f:\wowserver\source\jxqympcasftool\about.h
+1614611650 f:\wowserver\source\jxqympcasftool\about.h
 	<wx/stattext.h>
 	<wx/panel.h>
 	<wx/hyperlink.h>
@@ -16708,7 +16708,7 @@
 1384175916 c:\wxwidgets-3.0.0\include\wx\msw\hyperlink.h
 	"wx/generic/hyperlink.h"
 
-1614522689 f:\wowserver\source\jxqympcasftool\batdialog.h
+1614611659 f:\wowserver\source\jxqympcasftool\batdialog.h
 	<wx/stattext.h>
 	<wx/checkbox.h>
 	<wx/spinctrl.h>
@@ -16780,4 +16780,6 @@
 1614531052 f:\wowserver\source\jxqympcasftool\freeimage\_freeimage316\dist\include\freeimage.h
 	<wchar.h>
 	<inttypes.h>
+
+1384175916 c:\wxwidgets-3.0.0\lib\gcc_lib\mswud\wx\setup.h
 
