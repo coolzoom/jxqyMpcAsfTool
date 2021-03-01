@@ -35,7 +35,7 @@
 					<Add library="$(#wx.lib)\gcc_dll\libwxzlibd.a" />
 					<Add library="$(#wx.lib)\gcc_dll\libwxexpatd.a" />
 					<Add library="$(#wx.lib)\gcc_dll\libwxmsw30ud_aui.a" />
-					<Add library="$(#wx.lib)\gcc_dll\libwxbase30u_net.a" />
+					<Add library="$(#wx.lib)\gcc_dll\libwxbase30ud_net.a" />
 					<Add library="$(#wx.lib)\gcc_dll\libwxmsw30ud_gl.a" />
 					<Add library="$(#wx.lib)\gcc_dll\libwxmsw30ud_media.a" />
 					<Add library="$(#wx.lib)\gcc_dll\libwxmsw30ud_propgrid.a" />
@@ -75,7 +75,7 @@
 					<Add library="$(#wx.lib)\gcc_lib\libwxzlibd.a" />
 					<Add library="$(#wx.lib)\gcc_lib\libwxexpatd.a" />
 					<Add library="$(#wx.lib)\gcc_lib\libwxmsw30ud_aui.a" />
-					<Add library="$(#wx.lib)\gcc_lib\libwxbase30u_net.a" />
+					<Add library="$(#wx.lib)\gcc_lib\libwxbase30ud_net.a" />
 					<Add library="$(#wx.lib)\gcc_lib\libwxmsw30ud_gl.a" />
 					<Add library="$(#wx.lib)\gcc_lib\libwxmsw30ud_media.a" />
 					<Add library="$(#wx.lib)\gcc_lib\libwxmsw30ud_propgrid.a" />
