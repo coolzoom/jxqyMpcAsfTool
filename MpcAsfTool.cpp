@@ -1,4 +1,4 @@
-#include "MpcAsfTool.h"
+ï»¿#include "MpcAsfTool.h"
 #include "DlgAddFrames.h"
 #include "wx/filedlg.h"
 #include "wx/dirdlg.h"
@@ -179,17 +179,17 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     wxBoxSizer* BoxSizer3;
     wxBoxSizer* BoxSizer25;
 
-    Create(parent, wxID_ANY, _T("MPC ASF ±à¼­Æ÷"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
+    Create(parent, wxID_ANY, _T("MPC ASF ç¼–è¾‘å™¨"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
     SetClientSize(wxSize(978,737));
     Panel1 = new wxPanel(this, ID_PANEL1, wxPoint(232,256), wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
     BoxSizer1 = new wxBoxSizer(wxVERTICAL);
     BoxSizer28 = new wxBoxSizer(wxHORIZONTAL);
     StaticText_CurrentFile = new wxStaticText(Panel1, ID_STATICTEXT27, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT27"));
     BoxSizer28->Add(StaticText_CurrentFile, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    CheckBox_KeepSet = new wxCheckBox(Panel1, ID_CHECKBOX5, _T("±£ÁôÉèÖÃ"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX5"));
+    CheckBox_KeepSet = new wxCheckBox(Panel1, ID_CHECKBOX5, _T("ä¿ç•™è®¾ç½®"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX5"));
     CheckBox_KeepSet->SetValue(false);
     CheckBox_KeepSet->Disable();
-    CheckBox_KeepSet->SetToolTip(_T("´ò¿ªÒ»¸öÎÄ¼şÊ±£¬¸ÃÎÄ¼şÊ¹ÓÃµ±Ç°ÉèÖÃ£¬·½±ãĞèÒªÏàÍ¬ÉèÖÃµÄ¶àÎÄ¼şÁ¬Ğø±à¼­¡£\n±£ÁôµÄÓĞÒÔÏÂ¡£\n»ù±¾²ÎÊı£ºÍ¼Æ¬¿í¶È¡¢Í¼Æ¬¸ß¶È¡¢´¹Ö±Æ«ÒÆ\nÍ¼Æ¬Æ«ÒÆ£º¶¼±£Áô£¬¶Ô¡±¸¨ÖúÏß¡°ÎŞÓ°Ïì\nMPC£º ²»Ó°Ïì\nASF£º¶¼±£Áô\nÓ°×Ó£º·½°¸¡¢È«¾ÖÓ°×ÓÉèÖÃ¡¢È«¾ÖÍ¸Ã÷¶È\nÓÅ»¯£º¶¼±£Áô£¬¶Ô¡±µ×É«¡°ÎŞÓ°Ïì\n\n\n"));
+    CheckBox_KeepSet->SetToolTip(_T("æ‰“å¼€ä¸€ä¸ªæ–‡ä»¶æ—¶ï¼Œè¯¥æ–‡ä»¶ä½¿ç”¨å½“å‰è®¾ç½®ï¼Œæ–¹ä¾¿éœ€è¦ç›¸åŒè®¾ç½®çš„å¤šæ–‡ä»¶è¿ç»­ç¼–è¾‘ã€‚\nä¿ç•™çš„æœ‰ä»¥ä¸‹ã€‚\nåŸºæœ¬å‚æ•°ï¼šå›¾ç‰‡å®½åº¦ã€å›¾ç‰‡é«˜åº¦ã€å‚ç›´åç§»\nå›¾ç‰‡åç§»ï¼šéƒ½ä¿ç•™ï¼Œå¯¹â€è¾…åŠ©çº¿â€œæ— å½±å“\nMPCï¼š ä¸å½±å“\nASFï¼šéƒ½ä¿ç•™\nå½±å­ï¼šæ–¹æ¡ˆã€å…¨å±€å½±å­è®¾ç½®ã€å…¨å±€é€æ˜åº¦\nä¼˜åŒ–ï¼šéƒ½ä¿ç•™ï¼Œå¯¹â€åº•è‰²â€œæ— å½±å“\n\n\n"));
     BoxSizer28->Add(CheckBox_KeepSet, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer1->Add(BoxSizer28, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -205,42 +205,42 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer_ScrollWindow->SetSizeHints(ScrolledWindow_BmpShow);
     BoxSizer3->Add(ScrolledWindow_BmpShow, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer19 = new wxBoxSizer(wxHORIZONTAL);
-    Button_Animate = new wxButton(Panel1, ID_BUTTON4, _T("²¥·Å"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON4"));
+    Button_Animate = new wxButton(Panel1, ID_BUTTON4, _T("æ’­æ”¾"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON4"));
     Button_Animate->Disable();
     BoxSizer19->Add(Button_Animate, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer3->Add(BoxSizer19, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer29 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText19 = new wxStaticText(Panel1, ID_STATICTEXT19, _T("Ö¡£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT19"));
+    StaticText19 = new wxStaticText(Panel1, ID_STATICTEXT19, _T("å¸§ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT19"));
     BoxSizer29->Add(StaticText19, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticText_Frame_Sum = new wxStaticText(Panel1, ID_STATICTEXT20, _T("000"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT20"));
-    StaticText_Frame_Sum->SetToolTip(_T("×ÜÖ¡Êı"));
+    StaticText_Frame_Sum->SetToolTip(_T("æ€»å¸§æ•°"));
     BoxSizer29->Add(StaticText_Frame_Sum, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Slider_Frame = new wxSlider(Panel1, ID_SLIDER_FRAME, 0, 1, 100, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_SLIDER_FRAME"));
     Slider_Frame->Disable();
     BoxSizer29->Add(Slider_Frame, 8, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticText_Frame_Cur = new wxStaticText(Panel1, ID_STATICTEXT21, _T("000"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT21"));
-    StaticText_Frame_Cur->SetToolTip(_T("µ±Ç°Ö¡"));
+    StaticText_Frame_Cur->SetToolTip(_T("å½“å‰å¸§"));
     BoxSizer29->Add(StaticText_Frame_Cur, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer3->Add(BoxSizer29, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer5 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText6 = new wxStaticText(Panel1, ID_STATICTEXT24, _T("Ìøµ½£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT24"));
+    StaticText6 = new wxStaticText(Panel1, ID_STATICTEXT24, _T("è·³åˆ°ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT24"));
     BoxSizer5->Add(StaticText6, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_Frame_Goto = new wxSpinCtrl(Panel1, ID_SPINCTRL11, _T("0"), wxDefaultPosition, wxDefaultSize, 0, 0, 2147483646, 0, _T("ID_SPINCTRL11"));
     SpinCtrl_Frame_Goto->SetValue(_T("0"));
     SpinCtrl_Frame_Goto->Disable();
     BoxSizer5->Add(SpinCtrl_Frame_Goto, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer5->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    Button_AddFrames = new wxButton(Panel1, ID_BUTTON1, _T("Ìí¼Ó"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON1"));
+    Button_AddFrames = new wxButton(Panel1, ID_BUTTON1, _T("æ·»åŠ "), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON1"));
     Button_AddFrames->Disable();
-    Button_AddFrames->SetToolTip(_T("Ìí¼ÓÖ¡"));
+    Button_AddFrames->SetToolTip(_T("æ·»åŠ å¸§"));
     BoxSizer5->Add(Button_AddFrames, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    Button_DeleteCurrentFrame = new wxButton(Panel1, ID_BUTTON2, _T("É¾³ı"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON2"));
+    Button_DeleteCurrentFrame = new wxButton(Panel1, ID_BUTTON2, _T("åˆ é™¤"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON2"));
     Button_DeleteCurrentFrame->Disable();
-    Button_DeleteCurrentFrame->SetToolTip(_T("É¾³ıµ±Ç°Ö¡"));
+    Button_DeleteCurrentFrame->SetToolTip(_T("åˆ é™¤å½“å‰å¸§"));
     BoxSizer5->Add(Button_DeleteCurrentFrame, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    Button_UnDelete = new wxButton(Panel1, ID_BUTTON3, _T("»¹Ô­"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON3"));
+    Button_UnDelete = new wxButton(Panel1, ID_BUTTON3, _T("è¿˜åŸ"), wxDefaultPosition, wxSize(40,23), 0, wxDefaultValidator, _T("ID_BUTTON3"));
     Button_UnDelete->Disable();
-    Button_UnDelete->SetToolTip(_T("»¹Ô­ÉÏ´ÎÉ¾³ı"));
+    Button_UnDelete->SetToolTip(_T("è¿˜åŸä¸Šæ¬¡åˆ é™¤"));
     BoxSizer5->Add(Button_UnDelete, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer5->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer3->Add(BoxSizer5, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
@@ -252,19 +252,19 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer7 = new wxBoxSizer(wxHORIZONTAL);
     StaticLine1 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE1, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE1"));
     BoxSizer7->Add(StaticLine1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText7 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT7, _T("»ù±¾²ÎÊı"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
+    StaticText7 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT7, _T("åŸºæœ¬å‚æ•°"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
     BoxSizer7->Add(StaticText7, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticLine2 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE2, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE2"));
     BoxSizer7->Add(StaticLine2, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer7, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer8 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText1 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT1, _T("Í¼Æ¬¿í¶È£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+    StaticText1 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT1, _T("å›¾ç‰‡å®½åº¦ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     BoxSizer8->Add(StaticText1, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_GlobalWidth = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL1, _T("1"), wxDefaultPosition, wxDefaultSize, 0, 1, 9999, 1, _T("ID_SPINCTRL1"));
     SpinCtrl_GlobalWidth->SetValue(_T("1"));
     SpinCtrl_GlobalWidth->Disable();
     BoxSizer8->Add(SpinCtrl_GlobalWidth, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText2 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT2, _T("Í¼Æ¬¸ß¶È£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+    StaticText2 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT2, _T("å›¾ç‰‡é«˜åº¦ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     BoxSizer8->Add(StaticText2, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_GlobalHeight = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL2, _T("1"), wxDefaultPosition, wxDefaultSize, 0, 1, 9999, 1, _T("ID_SPINCTRL2"));
     SpinCtrl_GlobalHeight->SetValue(_T("1"));
@@ -272,13 +272,13 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer8->Add(SpinCtrl_GlobalHeight, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer8, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer6 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText3 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT3, _T("·½Ïò¸öÊı£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+    StaticText3 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT3, _T("æ–¹å‘ä¸ªæ•°ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
     BoxSizer6->Add(StaticText3, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_Direction = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL12, _T("1"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 1, _T("ID_SPINCTRL12"));
     SpinCtrl_Direction->SetValue(_T("1"));
     SpinCtrl_Direction->Disable();
     BoxSizer6->Add(SpinCtrl_Direction, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText5 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT5, _T("´¹Ö±Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
+    StaticText5 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT5, _T("å‚ç›´åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
     BoxSizer6->Add(StaticText5, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_Bottom = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL4, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL4"));
     SpinCtrl_Bottom->SetValue(_T("0"));
@@ -286,7 +286,7 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer6->Add(SpinCtrl_Bottom, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer6, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer9 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText4 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT4, _T("Ê±¼ä¼ä¸ô:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+    StaticText4 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT4, _T("æ—¶é—´é—´éš”:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
     BoxSizer9->Add(StaticText4, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Slider_Interval = new wxSlider(ScrolledWindow_Setting, ID_SLIDER1, 100, 0, 200, wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_SLIDER1"));
     Slider_Interval->Disable();
@@ -294,38 +294,38 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     StaticText_Interval = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT6, _T("100"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT6"));
     BoxSizer9->Add(StaticText_Interval, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer9->Add(-1,-1,0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    Button_AdjustPosition = new wxButton(ScrolledWindow_Setting, ID_BUTTON5, _T("×ø±êµ÷Õû"), wxDefaultPosition, wxSize(80,23), 0, wxDefaultValidator, _T("ID_BUTTON5"));
+    Button_AdjustPosition = new wxButton(ScrolledWindow_Setting, ID_BUTTON5, _T("åæ ‡è°ƒæ•´"), wxDefaultPosition, wxSize(80,23), 0, wxDefaultValidator, _T("ID_BUTTON5"));
     BoxSizer9->Add(Button_AdjustPosition, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer9, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer13 = new wxBoxSizer(wxHORIZONTAL);
     StaticLine11 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE11, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE11"));
     BoxSizer13->Add(StaticLine11, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText24 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT28, _T("Í¼Æ¬Æ«ÒÆ"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT28"));
+    StaticText24 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT28, _T("å›¾ç‰‡åç§»"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT28"));
     BoxSizer13->Add(StaticText24, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticLine12 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE12, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE12"));
     BoxSizer13->Add(StaticLine12, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer13, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer14 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText25 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT29, _T("Ë®Æ½Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT29"));
+    StaticText25 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT29, _T("æ°´å¹³åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT29"));
     BoxSizer14->Add(StaticText25, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_PicOffX = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL13, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL13"));
     SpinCtrl_PicOffX->SetValue(_T("0"));
     SpinCtrl_PicOffX->Disable();
     BoxSizer14->Add(SpinCtrl_PicOffX, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText26 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT30, _T("´¹Ö±Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT30"));
+    StaticText26 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT30, _T("å‚ç›´åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT30"));
     BoxSizer14->Add(StaticText26, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_PicOffY = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL14, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL14"));
     SpinCtrl_PicOffY->SetValue(_T("0"));
     SpinCtrl_PicOffY->Disable();
     BoxSizer14->Add(SpinCtrl_PicOffY, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    CheckBox_LockPicOffset = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX6, _T("Ëø¶¨"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX6"));
+    CheckBox_LockPicOffset = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX6, _T("é”å®š"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX6"));
     CheckBox_LockPicOffset->SetValue(false);
-    CheckBox_LockPicOffset->SetToolTip(_T("Ëø¶¨µ±Ç°Ö¡"));
+    CheckBox_LockPicOffset->SetToolTip(_T("é”å®šå½“å‰å¸§"));
     BoxSizer14->Add(CheckBox_LockPicOffset, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    CheckBox_AssiLine = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX4, _T("¸¨ÖúÏß"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
+    CheckBox_AssiLine = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX4, _T("è¾…åŠ©çº¿"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
     CheckBox_AssiLine->SetValue(false);
     CheckBox_AssiLine->Disable();
-    CheckBox_AssiLine->SetToolTip(_T("²»Ó°Ïì×îÖÕµÄÎÄ¼ş±£´æ"));
+    CheckBox_AssiLine->SetToolTip(_T("ä¸å½±å“æœ€ç»ˆçš„æ–‡ä»¶ä¿å­˜"));
     BoxSizer14->Add(CheckBox_AssiLine, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer14, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer10 = new wxBoxSizer(wxHORIZONTAL);
@@ -337,7 +337,7 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer10->Add(StaticLine4, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer10, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer11 = new wxBoxSizer(wxHORIZONTAL);
-    CheckBox_ShowShd = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX1, _T("ÏÔÊ¾Ó°×Ó£¨SHDÎÄ¼ş£©"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+    CheckBox_ShowShd = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX1, _T("æ˜¾ç¤ºå½±å­ï¼ˆSHDæ–‡ä»¶ï¼‰"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
     CheckBox_ShowShd->SetValue(false);
     CheckBox_ShowShd->Disable();
     BoxSizer11->Add(CheckBox_ShowShd, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
@@ -351,7 +351,7 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer12->Add(StaticLine6, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer12, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer15 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText10 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT10, _T("Ë®Æ½Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT10"));
+    StaticText10 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT10, _T("æ°´å¹³åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT10"));
     BoxSizer15->Add(StaticText10, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_Left = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL3, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL3"));
     SpinCtrl_Left->SetValue(_T("0"));
@@ -366,41 +366,41 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer24 = new wxBoxSizer(wxHORIZONTAL);
     StaticLine9 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE9, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE9"));
     BoxSizer24->Add(StaticLine9, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText18 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT18, _T("Ó°×Ó"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT18"));
+    StaticText18 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT18, _T("å½±å­"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT18"));
     BoxSizer24->Add(StaticText18, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticLine10 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE10, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE10"));
     BoxSizer24->Add(StaticLine10, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer24, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer16 = new wxBoxSizer(wxHORIZONTAL);
-    RadioButton_NoShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON3, _T("²»Éú³ÉÓ°×Ó"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON3"));
+    RadioButton_NoShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON3, _T("ä¸ç”Ÿæˆå½±å­"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON3"));
     RadioButton_NoShadow->SetValue(true);
     RadioButton_NoShadow->Disable();
     BoxSizer16->Add(RadioButton_NoShadow, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    RadioButton_MpcShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON1, _T("·½°¸1"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON1"));
+    RadioButton_MpcShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON1, _T("æ–¹æ¡ˆ1"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON1"));
     RadioButton_MpcShadow->Disable();
-    RadioButton_MpcShadow->SetToolTip(_T("ÊÊºÏ½£¶ş"));
+    RadioButton_MpcShadow->SetToolTip(_T("é€‚åˆå‰‘äºŒ"));
     BoxSizer16->Add(RadioButton_MpcShadow, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    RadioButton_AsfShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON2, _T("·½°¸2"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON2"));
+    RadioButton_AsfShadow = new wxRadioButton(ScrolledWindow_Setting, ID_RADIOBUTTON2, _T("æ–¹æ¡ˆ2"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON2"));
     RadioButton_AsfShadow->Disable();
-    RadioButton_AsfShadow->SetToolTip(_T("ÊÊºÏÔÂÓ°¡¢ĞÂ½£"));
+    RadioButton_AsfShadow->SetToolTip(_T("é€‚åˆæœˆå½±ã€æ–°å‰‘"));
     BoxSizer16->Add(RadioButton_AsfShadow, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    CheckBox_LockFrame = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX2, _T("±à¼­µ±Ç°Ö¡²¢Ëø¶¨"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
+    CheckBox_LockFrame = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX2, _T("ç¼–è¾‘å½“å‰å¸§å¹¶é”å®š"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
     CheckBox_LockFrame->SetValue(false);
     CheckBox_LockFrame->Disable();
     BoxSizer16->Add(CheckBox_LockFrame, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    CheckBox_NextLock = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX3, _T("Á¬ĞøËø¶¨"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX3"));
+    CheckBox_NextLock = new wxCheckBox(ScrolledWindow_Setting, ID_CHECKBOX3, _T("è¿ç»­é”å®š"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX3"));
     CheckBox_NextLock->SetValue(false);
     CheckBox_NextLock->Disable();
     BoxSizer16->Add(CheckBox_NextLock, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer16, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer17 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText11 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT11, _T("¹âÏßË®Æ½Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT11"));
+    StaticText11 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT11, _T("å…‰çº¿æ°´å¹³åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT11"));
     BoxSizer17->Add(StaticText11, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_SunX = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL5, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL5"));
     SpinCtrl_SunX->SetValue(_T("0"));
     SpinCtrl_SunX->Disable();
     BoxSizer17->Add(SpinCtrl_SunX, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText12 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT12, _T("¹âÏß´¹Ö±Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT12"));
+    StaticText12 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT12, _T("å…‰çº¿å‚ç›´åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT12"));
     BoxSizer17->Add(StaticText12, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_SunY = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL6, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL6"));
     SpinCtrl_SunY->SetValue(_T("0"));
@@ -408,13 +408,13 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer17->Add(SpinCtrl_SunY, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer17, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer18 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText14 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT14, _T("Ó°×ÓË®Æ½Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT14"));
+    StaticText14 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT14, _T("å½±å­æ°´å¹³åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT14"));
     BoxSizer18->Add(StaticText14, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_ShadowX = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL7, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL7"));
     SpinCtrl_ShadowX->SetValue(_T("0"));
     SpinCtrl_ShadowX->Disable();
     BoxSizer18->Add(SpinCtrl_ShadowX, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText15 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT15, _T("Ó°×Ó´¹Ö±Æ«ÒÆ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT15"));
+    StaticText15 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT15, _T("å½±å­å‚ç›´åç§»ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT15"));
     BoxSizer18->Add(StaticText15, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_ShadowY = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL8, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -2147483646, 2147483646, 0, _T("ID_SPINCTRL8"));
     SpinCtrl_ShadowY->SetValue(_T("0"));
@@ -422,8 +422,8 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer18->Add(SpinCtrl_ShadowY, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer18, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
     BoxSizer27 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText23 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT23, _T("È«¾ÖÍ¸Ã÷¶È£º    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT23"));
-    StaticText23->SetToolTip(_T("¶ÔSHDÎÄ¼şÎŞĞ§£¬¶ÔASF¡¢PNGµÈÎÄ¼şÓĞĞ§"));
+    StaticText23 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT23, _T("å…¨å±€é€æ˜åº¦ï¼š    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT23"));
+    StaticText23->SetToolTip(_T("å¯¹SHDæ–‡ä»¶æ— æ•ˆï¼Œå¯¹ASFã€PNGç­‰æ–‡ä»¶æœ‰æ•ˆ"));
     BoxSizer27->Add(StaticText23, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_ShadowAlpha = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL10, _T("120"), wxDefaultPosition, wxDefaultSize, 0, 0, 255, 120, _T("ID_SPINCTRL10"));
     SpinCtrl_ShadowAlpha->SetValue(_T("120"));
@@ -436,21 +436,21 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     BoxSizer20 = new wxBoxSizer(wxHORIZONTAL);
     StaticLine7 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE7, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE7"));
     BoxSizer20->Add(StaticLine7, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText16 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT16, _T("ÓÅ»¯"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT16"));
+    StaticText16 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT16, _T("ä¼˜åŒ–"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT16"));
     BoxSizer20->Add(StaticText16, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticLine8 = new wxStaticLine(ScrolledWindow_Setting, ID_STATICLINE8, wxDefaultPosition, wxSize(10,-1), wxLI_HORIZONTAL, _T("ID_STATICLINE8"));
     BoxSizer20->Add(StaticLine8, 4, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4->Add(BoxSizer20, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer23 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText17 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT17, _T("µ×É«£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT17"));
-    StaticText17->SetToolTip(_T("¶ÔÓĞÍ¸Ã÷ÖµµÄÎÄ¼ş£¨ASF¡¢PNGµÈ)´æÎªMPC¡¢GIFÊ±ÓĞĞ§"));
+    StaticText17 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT17, _T("åº•è‰²ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT17"));
+    StaticText17->SetToolTip(_T("å¯¹æœ‰é€æ˜å€¼çš„æ–‡ä»¶ï¼ˆASFã€PNGç­‰)å­˜ä¸ºMPCã€GIFæ—¶æœ‰æ•ˆ"));
     BoxSizer23->Add(StaticText17, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     ColourPickerCtrl_BaseColor = new wxColourPickerCtrl(ScrolledWindow_Setting, ID_COLOURPICKERCTRL1, wxColour(255,255,255), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_COLOURPICKERCTRL1"));
     ColourPickerCtrl_BaseColor->Disable();
     BoxSizer23->Add(ColourPickerCtrl_BaseColor, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer23->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText22 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT22, _T("Í¸Ã÷ãĞ£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT22"));
-    StaticText22->SetToolTip(_T("¶ÔÓĞÍ¸Ã÷ÖµµÄÎÄ¼ş£¨ASF¡¢PNGµÈ)ÓĞĞ§"));
+    StaticText22 = new wxStaticText(ScrolledWindow_Setting, ID_STATICTEXT22, _T("é€æ˜é˜ˆï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT22"));
+    StaticText22->SetToolTip(_T("å¯¹æœ‰é€æ˜å€¼çš„æ–‡ä»¶ï¼ˆASFã€PNGç­‰)æœ‰æ•ˆ"));
     BoxSizer23->Add(StaticText22, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SpinCtrl_AlphaMask = new wxSpinCtrl(ScrolledWindow_Setting, ID_SPINCTRL9, _T("0"), wxDefaultPosition, wxDefaultSize, 0, 0, 255, 0, _T("ID_SPINCTRL9"));
     SpinCtrl_AlphaMask->SetValue(_T("0"));
@@ -534,44 +534,44 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
 
 	//Menu start
     wxMenu *menu_file = new wxMenu;
-    menu_file->Append(wxID_NEW, wxT("ĞÂ½¨...\tCtrl+N"));
-    menu_file->Append(wxID_OPEN, wxT("´ò¿ª...\tCtrl+O"));
-    menu_file->Append(wxID_SAVE, wxT("±£´æ\tCtrl+S"));
-    menu_file->Append(wxID_SAVEAS, wxT("Áí´æÎª...\tCtrl+Alt+S"));
-    menu_file->Append(ID_EXPORT_TO_GIF, wxT("µ¼³öÎª GIF..."));
-    menu_file->Append(ID_EXPORT_TO_PNG, wxT("µ¼³öÎª PNG..."));
-    menu_file->Append(ID_BAT, wxT("Í¼Æ¬ÅúÁ¿µ¼³ö...\tCtrl+P"));
-    menu_file->Append(ID_SHOW_IN_FILEEXPLORERWINDOW, wxT("ÔÚÎÄ¼şä¯ÀÀ´°¿ÚÏÔÊ¾\tCtrl+W"));
-    menu_file->Append(ID_SHOW_IN_EXPLOER, wxT("´ò¿ªÎÄ¼şËùÔÚÎÄ¼ş¼Ğ\tCtrl+J"));
-    menu_file->Append(wxID_EXIT, wxT("ÍË³ö\tAlt+F4"));
+    menu_file->Append(wxID_NEW, wxT("æ–°å»º...\tCtrl+N"));
+    menu_file->Append(wxID_OPEN, wxT("æ‰“å¼€...\tCtrl+O"));
+    menu_file->Append(wxID_SAVE, wxT("ä¿å­˜\tCtrl+S"));
+    menu_file->Append(wxID_SAVEAS, wxT("å¦å­˜ä¸º...\tCtrl+Alt+S"));
+    menu_file->Append(ID_EXPORT_TO_GIF, wxT("å¯¼å‡ºä¸º GIF..."));
+    menu_file->Append(ID_EXPORT_TO_PNG, wxT("å¯¼å‡ºä¸º PNG..."));
+    menu_file->Append(ID_BAT, wxT("å›¾ç‰‡æ‰¹é‡å¯¼å‡º...\tCtrl+P"));
+    menu_file->Append(ID_SHOW_IN_FILEEXPLORERWINDOW, wxT("åœ¨æ–‡ä»¶æµè§ˆçª—å£æ˜¾ç¤º\tCtrl+W"));
+    menu_file->Append(ID_SHOW_IN_EXPLOER, wxT("æ‰“å¼€æ–‡ä»¶æ‰€åœ¨æ–‡ä»¶å¤¹\tCtrl+J"));
+    menu_file->Append(wxID_EXIT, wxT("é€€å‡º\tAlt+F4"));
     menu_file->Enable(wxID_SAVE, false);
     menu_file->Enable(wxID_SAVEAS, false);
     menu_file->Enable(ID_EXPORT_TO_GIF, false);
     menu_file->Enable(ID_EXPORT_TO_PNG, false);
 
     wxMenu *menu_frame = new wxMenu;
-    menu_frame->Append(ID_FRAME_PREVIOUS, wxT("ÉÏÒ»Ö¡\tA"));
-    menu_frame->Append(ID_FRAME_NEXT, wxT("ÏÂÒ»Ö¡\tD"));
+    menu_frame->Append(ID_FRAME_PREVIOUS, wxT("ä¸Šä¸€å¸§\tA"));
+    menu_frame->Append(ID_FRAME_NEXT, wxT("ä¸‹ä¸€å¸§\tD"));
     wxMenu *menu_process = new wxMenu;
-    menu_process->Append(ID_RESIZE, wxT("Ëõ·ÅËùÓĞ...\tCtrl+R"));
-    menu_process->Append(ID_RESIZECURRENT, wxT("Ëõ·Åµ±Ç°Ö¡...\tCtrl+L"));
+    menu_process->Append(ID_RESIZE, wxT("ç¼©æ”¾æ‰€æœ‰...\tCtrl+R"));
+    menu_process->Append(ID_RESIZECURRENT, wxT("ç¼©æ”¾å½“å‰å¸§...\tCtrl+L"));
 
     wxMenu *menu_window = new wxMenu;
-    menu_window->Append(ID_SHOWHIDE_FILEEXPLORER, wxT("ÎÄ¼şä¯ÀÀ´°¿Ú\tCtrl+E"));
+    menu_window->Append(ID_SHOWHIDE_FILEEXPLORER, wxT("æ–‡ä»¶æµè§ˆçª—å£\tCtrl+E"));
 
     wxMenu *menu_help = new wxMenu;
-    menu_help->Append(wxID_HELP,  wxT("°ïÖú\tF1"));
-    menu_help->Append(wxID_ABOUT, wxT("¹ØÓÚ..."));
+    menu_help->Append(wxID_HELP,  wxT("å¸®åŠ©\tF1"));
+    menu_help->Append(wxID_ABOUT, wxT("å…³äº..."));
     wxMenu *menu_batpicconv = new wxMenu;
-    menu_batpicconv->Append(ID_BAT_PIC_CANCLE, wxT("È¡Ïû"));
+    menu_batpicconv->Append(ID_BAT_PIC_CANCLE, wxT("å–æ¶ˆ"));
 
     MenuBar_BatPicConv = new wxMenuBar();
-    MenuBar_MpcAsfTool->Append(menu_file, wxT("ÎÄ¼ş(&F)"));
-    MenuBar_MpcAsfTool->Append(menu_frame, wxT("Ö¡(&I)"));
-    MenuBar_MpcAsfTool->Append(menu_process, wxT("Í¼Ïñ´¦Àí"));
-    MenuBar_MpcAsfTool->Append(menu_window, wxT("´°¿Ú"));
-    MenuBar_MpcAsfTool->Append(menu_help, wxT("°ïÖú(&H)"));
-    MenuBar_BatPicConv->Append(menu_batpicconv, wxT("Åú´¦Àí"));
+    MenuBar_MpcAsfTool->Append(menu_file, wxT("æ–‡ä»¶(&F)"));
+    MenuBar_MpcAsfTool->Append(menu_frame, wxT("å¸§(&I)"));
+    MenuBar_MpcAsfTool->Append(menu_process, wxT("å›¾åƒå¤„ç†"));
+    MenuBar_MpcAsfTool->Append(menu_window, wxT("çª—å£"));
+    MenuBar_MpcAsfTool->Append(menu_help, wxT("å¸®åŠ©(&H)"));
+    MenuBar_BatPicConv->Append(menu_batpicconv, wxT("æ‰¹å¤„ç†"));
 	//Menu end
 
     ScrolledWindow_Setting->SetScrollRate(0, 20);
@@ -609,7 +609,7 @@ void MpcAsfTool::OnClose(wxCloseEvent &event)
 {
     if(!batpiccancle)
     {
-        if(wxMessageBox(wxT("Í£Ö¹ÅúÁ¿×ª»»£¿"), wxT("ÏûÏ¢"), wxOK|wxCANCEL) == wxOK)
+        if(wxMessageBox(wxT("åœæ­¢æ‰¹é‡è½¬æ¢ï¼Ÿ"), wxT("æ¶ˆæ¯"), wxOK|wxCANCEL) == wxOK)
         {
             batpiccancle = true;
         }
@@ -663,7 +663,7 @@ void MpcAsfTool::OnFileOpen(wxCommandEvent &event)
 
     if(!ChangeSaved()) return;
 
-    wxFileDialog filedlg(this, wxT("Ñ¡ÔñMPC ASF SPR RPCÎÄ¼ş"), wxT(""), wxT(""),
+    wxFileDialog filedlg(this, wxT("é€‰æ‹©MPC ASF SPR RPCæ–‡ä»¶"), wxT(""), wxT(""),
                          wxT("MPC ASF SPR RPC(*.mpc,*.asf,*.spr,*.rpc)|*.mpc;*.asf;*.spr;*.rpc|MPC(*.mpc)|*.mpc|ASF(*.asf)|*.asf|SPR(*.spr)|*.spr|RPC(*.rpc)|*.rpc"),
                          wxFD_OPEN|wxFD_FILE_MUST_EXIST);
 
@@ -713,7 +713,7 @@ bool MpcAsfTool::OpenFile(const wxString path)
 
     if(!res)
     {
-        wxMessageBox(wxT("ÎÄ¼ş´ò¿ªÊ§°Ü"), wxT("ÏûÏ¢"));
+        wxMessageBox(wxT("æ–‡ä»¶æ‰“å¼€å¤±è´¥"), wxT("æ¶ˆæ¯"));
         return false;
     }
 
@@ -747,11 +747,11 @@ void MpcAsfTool::OnExportToGif(wxCommandEvent &event)
 
     if (manager.GetFrameCounts() == 0)
     {
-        wxMessageBox(wxT("É¶Ò²Ã»ÓĞ£¬²»ÄÜµ¼³ö°¡£¡"), wxT("ÏûÏ¢"), wxOK|wxICON_INFORMATION);
+        wxMessageBox(wxT("å•¥ä¹Ÿæ²¡æœ‰ï¼Œä¸èƒ½å¯¼å‡ºå•Šï¼"), wxT("æ¶ˆæ¯"), wxOK|wxICON_INFORMATION);
         return;
     }
 
-    wxFileDialog filedlg(this, wxT("´æÎªGIFÎÄ¼ş"), wxT(""), wxT(""),
+    wxFileDialog filedlg(this, wxT("å­˜ä¸ºGIFæ–‡ä»¶"), wxT(""), wxT(""),
                          wxT("GIF(*.gif)|*.gif"),
                          wxFD_SAVE|wxFD_OVERWRITE_PROMPT);
 
@@ -759,12 +759,12 @@ void MpcAsfTool::OnExportToGif(wxCommandEvent &event)
     {
         if(!manager.SaveToGif(filedlg.GetPath()))
         {
-            wxMessageBox(wxT("´æ´¢Ê§°Ü"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+            wxMessageBox(wxT("å­˜å‚¨å¤±è´¥"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
             return;
         }
         else
         {
-            wxMessageBox(wxT("Íê³É£¡"), wxT("ÏûÏ¢"), wxOK|wxICON_INFORMATION);
+            wxMessageBox(wxT("å®Œæˆï¼"), wxT("æ¶ˆæ¯"), wxOK|wxICON_INFORMATION);
             return;
         }
     }
@@ -775,11 +775,11 @@ void MpcAsfTool::OnExportToPng(wxCommandEvent &event)
 
     if (manager.GetFrameCounts() == 0)
     {
-        wxMessageBox(wxT("É¶Ò²Ã»ÓĞ£¬²»ÄÜµ¼³ö°¡£¡"), wxT("ÏûÏ¢"), wxOK|wxICON_INFORMATION);
+        wxMessageBox(wxT("å•¥ä¹Ÿæ²¡æœ‰ï¼Œä¸èƒ½å¯¼å‡ºå•Šï¼"), wxT("æ¶ˆæ¯"), wxOK|wxICON_INFORMATION);
         return;
     }
 
-    wxDirDialog dirdlg(this, wxT("Ñ¡Ôñµ¼³öÎÄ¼ş¼Ğ"), wxT(""));
+    wxDirDialog dirdlg(this, wxT("é€‰æ‹©å¯¼å‡ºæ–‡ä»¶å¤¹"), wxT(""));
 
     if(dirdlg.ShowModal() == wxID_OK)
     {
@@ -799,12 +799,12 @@ void MpcAsfTool::OnExportToPng(wxCommandEvent &event)
 
             if(!manager.SaveToPng(pngpath, predlg.IsReverse()))
             {
-                wxMessageBox(wxT("´æ´¢Ê§°Ü"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+                wxMessageBox(wxT("å­˜å‚¨å¤±è´¥"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
                 return;
             }
             else
             {
-                wxMessageBox(wxT("Íê³É£¡"), wxT("ÏûÏ¢"), wxOK|wxICON_INFORMATION);
+                wxMessageBox(wxT("å®Œæˆï¼"), wxT("æ¶ˆæ¯"), wxOK|wxICON_INFORMATION);
                 return;
             }
         }
@@ -824,7 +824,7 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
         wxString filename,outpath,temp;
         WorkManager conv;
 
-        wxDirDialog dirdlg(this, wxT("Ñ¡Ôñµ¼³öÎÄ¼ş¼Ğ"), wxT(""));
+        wxDirDialog dirdlg(this, wxT("é€‰æ‹©å¯¼å‡ºæ–‡ä»¶å¤¹"), wxT(""));
         if(dirdlg.ShowModal() != wxID_OK) return;
         outpath = dirdlg.GetPath() + wxFileName::GetPathSeparator();
 
@@ -858,7 +858,7 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
             {
                 if(batpiccancle) break;
 
-                this->SetTitle(frmt+wxString::Format(wxT(" - ÕıÔÚ×ª»»: %d/%d"), filecounts, j));
+                this->SetTitle(frmt+wxString::Format(wxT(" - æ­£åœ¨è½¬æ¢: %d/%d"), filecounts, j));
                 wxTheApp->Yield(true);
                 conv.ReNew();
                 conv.SetShdIncluded(batdlg.isShd());
@@ -922,16 +922,16 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
             if(errs.GetCount() != 0)
             {
                 wxString stre;
-                stre = _T("ÒÔÏÂÎÄ¼şÊ§°Ü£º\n");
+                stre = _T("ä»¥ä¸‹æ–‡ä»¶å¤±è´¥ï¼š\n");
                 for(size_t eri = 0; eri < errs.GetCount(); eri++)
                 {
                     stre += errs[eri] + wxT("\n");
                 }
-                wxMessageBox(stre, wxT("ÏûÏ¢"), wxOK|wxICON_ERROR);
+                wxMessageBox(stre, wxT("æ¶ˆæ¯"), wxOK|wxICON_ERROR);
             }
             else
             {
-                if(!batpiccancle) wxMessageBox(_T("Íê³É£¡"), _T("ÏûÏ¢"), wxOK);
+                if(!batpiccancle) wxMessageBox(_T("å®Œæˆï¼"), _T("æ¶ˆæ¯"), wxOK);
             }
         }
     }
@@ -963,7 +963,7 @@ void MpcAsfTool::OnExit(wxCommandEvent &event)
 {
     if(!batpiccancle)
     {
-        if(wxMessageBox(wxT("Í£Ö¹ÅúÁ¿×ª»»£¿"), wxT("ÏûÏ¢"), wxOK|wxCANCEL) == wxOK)
+        if(wxMessageBox(wxT("åœæ­¢æ‰¹é‡è½¬æ¢ï¼Ÿ"), wxT("æ¶ˆæ¯"), wxOK|wxCANCEL) == wxOK)
         {
             batpiccancle = true;
         }
@@ -1172,9 +1172,9 @@ void MpcAsfTool::OnAbout(wxCommandEvent &event)
 }
 void MpcAsfTool::OnButton1Click(wxCommandEvent& event)
 {
-    wxFileDialog filedlg(this, wxT("Ñ¡Ôñ¶à¸öÍ¼Æ¬ÎÄ¼ş"), wxT(""), wxT(""),
-                         wxT("Í¼Æ¬ÎÄ¼ş(*.spr,*.png,*gif,*bmp,*.jpg,*.tif,*.ico,*.psd)|*.spr;*.png;*.gif;*.bmp;*.jpg;*.tif;*.ico;*.psd|\
-SPR(½£Íø¡¢½£ÏÀÊÀ½çÍ¼Æ¬×ÊÔ´ÎÄ¼ş)|*.spr|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TIFF|*.tif|ICO|*.ico|PSD|*.psd|ËùÓĞÎÄ¼ş|*.*"),
+    wxFileDialog filedlg(this, wxT("é€‰æ‹©å¤šä¸ªå›¾ç‰‡æ–‡ä»¶"), wxT(""), wxT(""),
+                         wxT("å›¾ç‰‡æ–‡ä»¶(*.spr,*.png,*gif,*bmp,*.jpg,*.tif,*.ico,*.psd)|*.spr;*.png;*.gif;*.bmp;*.jpg;*.tif;*.ico;*.psd|\
+SPR(å‰‘ç½‘ã€å‰‘ä¾ ä¸–ç•Œå›¾ç‰‡èµ„æºæ–‡ä»¶)|*.spr|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TIFF|*.tif|ICO|*.ico|PSD|*.psd|æ‰€æœ‰æ–‡ä»¶|*.*"),
                          wxFD_OPEN|wxFD_MULTIPLE|wxFD_FILE_MUST_EXIST);
     if(filedlg.ShowModal() == wxID_OK)
     {
@@ -1194,13 +1194,13 @@ SPR(½£Íø¡¢½£ÏÀÊÀ½çÍ¼Æ¬×ÊÔ´ÎÄ¼ş)|*.spr|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TI
             wxArrayString errfiles = manager.AddFiles(infiles);
             if(!errfiles.IsEmpty())
             {
-                wxString errstr = wxT("ÒÔÏÂÎÄ¼şÌí¼ÓÊ§°Ü:\n\n");
+                wxString errstr = wxT("ä»¥ä¸‹æ–‡ä»¶æ·»åŠ å¤±è´¥:\n\n");
                 for(size_t i = 0; i < errfiles.GetCount(); i++)
                 {
                     errstr += errfiles[i];
                     errstr += wxT("\n");
                 }
-                wxMessageBox(errstr, wxT("´íÎó"), wxOK|wxICON_ERROR);
+                wxMessageBox(errstr, wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
             }
             if(init)InitFromManager();
             RefreshFrameSlide();
@@ -1432,7 +1432,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
 {
     if(manager.GetFrameCounts() == 0)
     {
-        wxMessageBox(wxT("¿ÕÎÄ¼ş²»ÄÜ±£´æ£¡"), wxT("ÏûÏ¢"), wxOK|wxICON_INFORMATION);
+        wxMessageBox(wxT("ç©ºæ–‡ä»¶ä¸èƒ½ä¿å­˜ï¼"), wxT("æ¶ˆæ¯"), wxOK|wxICON_INFORMATION);
         return false;
     }
 
@@ -1440,11 +1440,11 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
     {
 
         wxString capital;
-        if(!CurrentFile) capital = wxT("Áí´æÎª");
-        else capital = wxT("±£´æÎÄ¼ş");
+        if(!CurrentFile) capital = wxT("å¦å­˜ä¸º");
+        else capital = wxT("ä¿å­˜æ–‡ä»¶");
 
         wxFileDialog filedlg(this, capital, wxT(""), wxT(""),
-                             wxT("MPC-½£ÏÀ(*.mpc)|*.mpc|MPC-ÕÔÔÆ´«(*.mpc)|*.mpc|ASF(*.asf)|*.asf"),
+                             wxT("MPC-å‰‘ä¾ (*.mpc)|*.mpc|MPC-èµµäº‘ä¼ (*.mpc)|*.mpc|ASF(*.asf)|*.asf"),
                              wxFD_SAVE|wxFD_OVERWRITE_PROMPT);
         if(filedlg.ShowModal() == wxID_OK)
         {
@@ -1455,7 +1455,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
             {
                 if(!manager.SaveToAsf(filedlg.GetPath()))
                 {
-                    wxMessageBox(wxT("ÎÄ¼ş±£´æÊ§°Ü£¡"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+                    wxMessageBox(wxT("æ–‡ä»¶ä¿å­˜å¤±è´¥ï¼"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
                     return false;
                 }
             }
@@ -1464,7 +1464,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
             	int type = (filedlg.GetFilterIndex() == 0 ? 0 : 1);
                 if(!manager.SaveToMpc(filedlg.GetPath(), type))
                 {
-                    wxMessageBox(wxT("ÎÄ¼ş±£´æÊ§°Ü£¡"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+                    wxMessageBox(wxT("æ–‡ä»¶ä¿å­˜å¤±è´¥ï¼"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
                     return false;
                 }
             }
@@ -1485,7 +1485,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
         {
             if(!manager.SaveToAsf(currentfile))
             {
-                wxMessageBox(wxT("ÎÄ¼ş±£´æÊ§°Ü£¡"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+                wxMessageBox(wxT("æ–‡ä»¶ä¿å­˜å¤±è´¥ï¼"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
                 return false;
             }
         }
@@ -1493,7 +1493,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
         {
             if(!manager.SaveToMpc(currentfile))
             {
-                wxMessageBox(wxT("ÎÄ¼ş±£´æÊ§°Ü£¡"), wxT("´íÎó"), wxOK|wxICON_ERROR);
+                wxMessageBox(wxT("æ–‡ä»¶ä¿å­˜å¤±è´¥ï¼"), wxT("é”™è¯¯"), wxOK|wxICON_ERROR);
                 return false;
             }
         }
@@ -1646,7 +1646,7 @@ bool MpcAsfTool::ChangeSaved()
     {
 
         int ret;
-        ret = wxMessageBox(wxT("ÎÄ¼şÒÑ¸ü¸Ä£¬ÊÇ·ñ±£´æ£¿"), wxT("ÏûÏ¢"), wxYES_NO|wxCANCEL|wxICON_QUESTION);
+        ret = wxMessageBox(wxT("æ–‡ä»¶å·²æ›´æ”¹ï¼Œæ˜¯å¦ä¿å­˜ï¼Ÿ"), wxT("æ¶ˆæ¯"), wxYES_NO|wxCANCEL|wxICON_QUESTION);
         if(ret == wxYES)
         {
             if(!SaveFile())
@@ -2036,13 +2036,13 @@ void MpcAsfTool::OnButton_AnimateClick(wxCommandEvent& event)
 {
     if(isplay)
     {
-        Button_Animate->SetLabel(wxT("²¥·Å"));
+        Button_Animate->SetLabel(wxT("æ’­æ”¾"));
         StopAnimate(true);
         RefreshBmpShow();
     }
     else
     {
-        Button_Animate->SetLabel(wxT("Í£Ö¹"));
+        Button_Animate->SetLabel(wxT("åœæ­¢"));
         BeginAnimate(true);
     }
 }

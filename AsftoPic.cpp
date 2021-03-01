@@ -1,4 +1,4 @@
-#include "AsftoPic.hpp"
+Ôªø#include "AsftoPic.hpp"
 #include "AsfDecode.hpp"
 #include "MAPICDATA.hpp"
 //#include "FreeImage_IO_CallBack.hpp"
@@ -46,7 +46,7 @@ bool CovAsftoPic::Save(FileType type, Palette_Colour *backcolor, unsigned char t
                 data.AddFrame(strdata);
             }
             if(!data.SaveToGif(outFilePath)) return false;
-            wxMessageBox(wxT("GIFŒƒº˛“—±£¥Ê"));
+            wxMessageBox(wxT("GIFÊñá‰ª∂Â∑≤‰øùÂ≠ò"));
             return true;
         }
         else if(type == T_PNG)
@@ -59,7 +59,7 @@ bool CovAsftoPic::Save(FileType type, Palette_Colour *backcolor, unsigned char t
             }
             wxString infilename = wxFileName::FileName(inFilePath).GetName();
             if(!data.SaveToPng(outFilePath+wxFileName::GetPathSeparator()+infilename)) return false;
-            wxMessageBox(wxT("PNGŒƒº˛“—±£¥Ê"));
+            wxMessageBox(wxT("PNGÊñá‰ª∂Â∑≤‰øùÂ≠ò"));
             return true;
         }
         else if(type == T_MPC)
@@ -71,7 +71,7 @@ bool CovAsftoPic::Save(FileType type, Palette_Colour *backcolor, unsigned char t
                 data.AddFrame(strdata);
             }
             if(!data.SaveToMpc(outFilePath, direction, interval, bottom, makeshadow)) return false;
-            wxMessageBox(wxT("MPCŒƒº˛“—±£¥Ê"));
+            wxMessageBox(wxT("MPCÊñá‰ª∂Â∑≤‰øùÂ≠ò"));
             return true;
         }
         else if(type == T_ASF)
@@ -84,7 +84,7 @@ bool CovAsftoPic::Save(FileType type, Palette_Colour *backcolor, unsigned char t
             }
             if(!data.SaveToAsf(outFilePath, direction, interval, bottom, left, makeshadow,
                                offsetsunx, offsetsuny, offsetposx, offsetposy)) return false;
-            wxMessageBox(wxT("ASFŒƒº˛“—±£¥Ê"));
+            wxMessageBox(wxT("ASFÊñá‰ª∂Â∑≤‰øùÂ≠ò"));
             return true;
         }
     }

@@ -1,4 +1,4 @@
-#ifndef MPCASFTOOL_H
+ï»¿#ifndef MPCASFTOOL_H
 #define MPCASFTOOL_H
 
 //(*Headers(MpcAsfTool)
@@ -344,7 +344,7 @@ public:
 	FileExplorerPanel(wxWindow *parent)
 		:FileExplorerPanelBase(parent)
 	{
-		SetTitle(wxT("ÎÄ¼þä¯ÀÀ"));
+		SetTitle(wxT("æ–‡ä»¶æµè§ˆ"));
 		m_genericDirCtrl1->SetFilter(wxT("ALL|*.*|MPC ASF SPR RPC(*.mpc,*.asf,*.spr,*.rpc)|*.mpc;*.asf;*.spr;*.rpc|MPC(*.mpc)|*.mpc|ASF(*.asf)|*.asf|SPR(*.spr)|*.spr|RPC(*.rpc)|*.rpc"));
 		m_genericDirCtrl1->SetFilterIndex(1);
 		m_parent = (MpcAsfTool*)parent;

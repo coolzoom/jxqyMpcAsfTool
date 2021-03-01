@@ -1,4 +1,4 @@
-#include "BatDialog.h"
+ï»¿#include "BatDialog.h"
 
 #include "wx/filedlg.h"
 
@@ -39,38 +39,38 @@ END_EVENT_TABLE()
 BatDialog::BatDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
 	//(*Initialize(BatDialog)
-	Create(parent, wxID_ANY, _T("Í¼Æ¬ÅúÁ¿µ¼³ö"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
+	Create(parent, wxID_ANY, _T("å›¾ç‰‡æ‰¹é‡å¯¼å‡º"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
 	SetClientSize(wxSize(400,405));
 	RichTextCtrl_List = new wxRichTextCtrl(this, ID_RICHTEXTCTRL1, wxEmptyString, wxPoint(8,16), wxSize(288,240), wxRE_MULTILINE, wxDefaultValidator, _T("ID_RICHTEXTCTRL1"));
 	wxRichTextAttr rchtxtAttr_1;
 	rchtxtAttr_1.SetBulletStyle(wxTEXT_ATTR_BULLET_STYLE_ALIGN_LEFT);
-	Button_Add = new wxButton(this, ID_BUTTON1, _T("Ìí¼Ó"), wxPoint(304,32), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
-	Button_Empty = new wxButton(this, ID_BUTTON2, _T("Çå¿Õ"), wxPoint(304,72), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
+	Button_Add = new wxButton(this, ID_BUTTON1, _T("æ·»åŠ "), wxPoint(304,32), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
+	Button_Empty = new wxButton(this, ID_BUTTON2, _T("æ¸…ç©º"), wxPoint(304,72), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
 	RadioButton_Gif = new wxRadioButton(this, ID_RADIOBUTTON1, _T("GIF"), wxPoint(320,152), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON1"));
 	RadioButton_Gif->SetValue(true);
 	RadioButton_Png = new wxRadioButton(this, ID_RADIOBUTTON2, _T("PNG"), wxPoint(320,176), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON2"));
-	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _T("µ¼³öÎª£º"), wxPoint(304,120), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
-	Button_Ok = new wxButton(this, ID_BUTTON3, _T("È·¶¨"), wxPoint(72,370), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
-	Button_Cancle = new wxButton(this, ID_BUTTON4, _T("È¡Ïû"), wxPoint(224,370), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
+	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _T("å¯¼å‡ºä¸ºï¼š"), wxPoint(304,120), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+	Button_Ok = new wxButton(this, ID_BUTTON3, _T("ç¡®å®š"), wxPoint(72,370), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
+	Button_Cancle = new wxButton(this, ID_BUTTON4, _T("å–æ¶ˆ"), wxPoint(224,370), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
 	CheckBox_isShd = new wxCheckBox(this, ID_CHECKBOX1, _T("SHD"), wxPoint(16,272), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
 	CheckBox_isShd->SetValue(true);
-	CheckBox_isShd->SetToolTip(_T("ÊÇ·ñ°üº¬Ó°×Ó"));
-	StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _T("µ×É«£º"), wxPoint(72,272), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+	CheckBox_isShd->SetToolTip(_T("æ˜¯å¦åŒ…å«å½±å­"));
+	StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _T("åº•è‰²ï¼š"), wxPoint(72,272), wxDefaultSize, 0, _T("ID_STATICTEXT2"));
 	ColourPickerCtrl_BaseColor = new wxColourPickerCtrl(this, ID_COLOURPICKERCTRL1, wxColour(255,255,255), wxPoint(112,268), wxSize(48,20), 0, wxDefaultValidator, _T("ID_COLOURPICKERCTRL1"));
-	StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _T("Í¸Ã÷Óò£º"), wxPoint(176,272), wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+	StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _T("é€æ˜ŽåŸŸï¼š"), wxPoint(176,272), wxDefaultSize, 0, _T("ID_STATICTEXT3"));
 	SpinCtrl_AlphaMask = new wxSpinCtrl(this, ID_SPINCTRL1, _T("0"), wxPoint(230,268), wxSize(88,21), 0, 0, 255, 0, _T("ID_SPINCTRL1"));
 	SpinCtrl_AlphaMask->SetValue(_T("0"));
 	SpinCtrl_FrameEnd = new wxSpinCtrl(this, ID_SPINCTRL2, _T("99999999"), wxPoint(210,305), wxSize(88,21), 0, 1, 99999999, 99999999, _T("ID_SPINCTRL2"));
 	SpinCtrl_FrameEnd->SetValue(_T("99999999"));
 	SpinCtrl_FrameBegin = new wxSpinCtrl(this, ID_SPINCTRL3, _T("1"), wxPoint(80,305), wxSize(88,21), 0, 1, 99999999, 1, _T("ID_SPINCTRL3"));
 	SpinCtrl_FrameBegin->SetValue(_T("1"));
-	StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _T("µ½"), wxPoint(180,307), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
-	StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _T("Ö¡·¶Î§£º"), wxPoint(24,307), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
+	StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _T("åˆ°"), wxPoint(180,307), wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+	StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _T("å¸§èŒƒå›´ï¼š"), wxPoint(24,307), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
 	RadioButton_Mpc = new wxRadioButton(this, ID_RADIOBUTTON3, _T("MPC"), wxPoint(320,200), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON3"));
 	RadioButton_Asf = new wxRadioButton(this, ID_RADIOBUTTON4, _T("ASF"), wxPoint(320,224), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON4"));
 	SpinCtrl_Scale = new wxSpinCtrl(this, ID_SPINCTRL4, _T("100"), wxPoint(80,336), wxSize(88,21), 0, 1, 100, 100, _T("ID_SPINCTRL4"));
 	SpinCtrl_Scale->SetValue(_T("100"));
-	StaticText6 = new wxStaticText(this, ID_STATICTEXT6, _T("Ëõ·Å£º"), wxPoint(34,340), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
+	StaticText6 = new wxStaticText(this, ID_STATICTEXT6, _T("ç¼©æ”¾ï¼š"), wxPoint(34,340), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
 	StaticText7 = new wxStaticText(this, ID_STATICTEXT7, _T("%"), wxPoint(176,340), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
 
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&BatDialog::OnButton_AddClick);
@@ -91,8 +91,8 @@ BatDialog::~BatDialog()
 
 void BatDialog::OnButton_AddClick(wxCommandEvent& event)
 {
-    wxFileDialog filedlg(this, wxT("Ñ¡ÔñMPC ASF SPR RPC Í¼Æ¬ ÎÄ¼þ"), wxT(""), wxT(""),
-                         wxT("ËùÓÐÎÄ¼þ|*.*|MPC ASF SPR RPC(*.mpc,*.asf,*.spr,*.rpc)|*.mpc;*.asf;*.spr;*.rpc|Í¼Æ¬ÎÄ¼þ(*.png,*gif,*bmp,*.jpg,*.tif,*.ico,*.psd)|*.png;*.gif;*.bmp;*.jpg;*.tif;*.ico;*.psd|MPC(*.mpc)|*.mpc|ASF(*.asf)|*.asf|SPR(*.spr)|*.spr|RPC(*.rpc)|*.rpc|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TIFF|*.tif|ICO|*.ico|PSD|*.psd"),
+    wxFileDialog filedlg(this, wxT("é€‰æ‹©MPC ASF SPR RPC å›¾ç‰‡ æ–‡ä»¶"), wxT(""), wxT(""),
+                         wxT("æ‰€æœ‰æ–‡ä»¶|*.*|MPC ASF SPR RPC(*.mpc,*.asf,*.spr,*.rpc)|*.mpc;*.asf;*.spr;*.rpc|å›¾ç‰‡æ–‡ä»¶(*.png,*gif,*bmp,*.jpg,*.tif,*.ico,*.psd)|*.png;*.gif;*.bmp;*.jpg;*.tif;*.ico;*.psd|MPC(*.mpc)|*.mpc|ASF(*.asf)|*.asf|SPR(*.spr)|*.spr|RPC(*.rpc)|*.rpc|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TIFF|*.tif|ICO|*.ico|PSD|*.psd"),
                          wxFD_OPEN|wxFD_FILE_MUST_EXIST|wxFD_MULTIPLE);
 
     if(filedlg.ShowModal() == wxID_OK)

@@ -1,4 +1,4 @@
-#include "DlgAddFrames.h"
+ï»¿#include "DlgAddFrames.h"
 #include "wx/msgdlg.h"
 
 //(*InternalHeaders(DlgAddFrames)
@@ -23,14 +23,14 @@ END_EVENT_TABLE()
 DlgAddFrames::DlgAddFrames(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
     //(*Initialize(DlgAddFrames)
-    Create(parent, wxID_ANY, _T("Ìí¼ÓÖ¡"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
+    Create(parent, wxID_ANY, _T("æ·»åŠ å¸§"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
     SetClientSize(wxSize(511,444));
     ListCtrl_Files = new wxListCtrl(this, ID_LISTCTRL1, wxPoint(24,8), wxSize(440,391), wxLC_REPORT|wxLC_SINGLE_SEL, wxDefaultValidator, _T("ID_LISTCTRL1"));
-    Button_UP = new wxButton(this, ID_BUTTON3, _T("¡Ä"), wxPoint(472,130), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON3"));
-    Button_Down = new wxButton(this, ID_BUTTON4, _T("¡Å"), wxPoint(472,160), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON4"));
-    Button_Del = new wxButton(this, ID_BUTTON5, _T("¡Á"), wxPoint(472,190), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON5"));
-    Button_OK = new wxButton(this, ID_BUTTON1, _T("È·¶¨"), wxPoint(88,408), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
-    Button1 = new wxButton(this, ID_BUTTON2, _T("È¡Ïû"), wxPoint(312,408), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
+    Button_UP = new wxButton(this, ID_BUTTON3, _T("âˆ§"), wxPoint(472,130), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON3"));
+    Button_Down = new wxButton(this, ID_BUTTON4, _T("âˆ¨"), wxPoint(472,160), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON4"));
+    Button_Del = new wxButton(this, ID_BUTTON5, _T("Ã—"), wxPoint(472,190), wxSize(18,23), 0, wxDefaultValidator, _T("ID_BUTTON5"));
+    Button_OK = new wxButton(this, ID_BUTTON1, _T("ç¡®å®š"), wxPoint(88,408), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
+    Button1 = new wxButton(this, ID_BUTTON2, _T("å–æ¶ˆ"), wxPoint(312,408), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
 
     Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DlgAddFrames::OnButton_UPClick);
     Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&DlgAddFrames::OnButton_DownClick);
@@ -53,7 +53,7 @@ void DlgAddFrames::OnListSelected(wxListEvent &event)
 }
 void DlgAddFrames::InitListCtrl(const wxArrayString &files)
 {
-    ListCtrl_Files->InsertColumn(0, wxT("ÎÄ¼þ"));
+    ListCtrl_Files->InsertColumn(0, wxT("æ–‡ä»¶"));
     ListCtrl_Files->SetColumnWidth(0, 430);
     for(size_t i = 0; i < files.GetCount(); i++)
     {

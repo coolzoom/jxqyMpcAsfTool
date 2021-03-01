@@ -1,4 +1,4 @@
-#include "ExportToImg.h"
+ï»¿#include "ExportToImg.h"
 
 #include "wx/msgdlg.h"
 //(*InternalHeaders(ExportToImg)
@@ -22,15 +22,15 @@ END_EVENT_TABLE()
 ExportToImg::ExportToImg(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
 	//(*Initialize(ExportToImg)
-	Create(parent, wxID_ANY, _T("ÇëÊäÈë"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
+	Create(parent, wxID_ANY, _T("è¯·è¾“å…¥"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
 	SetClientSize(wxSize(278,125));
 	Panel1 = new wxPanel(this, ID_PANEL1, wxPoint(-8,-8), wxSize(336,152), wxTAB_TRAVERSAL, _T("ID_PANEL1"));
-	StaticText1 = new wxStaticText(Panel1, ID_STATICTEXT1, _T("ÎÄ¼şÃûÇ°×º£º"), wxPoint(32,35), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
-	Button1 = new wxButton(Panel1, ID_BUTTON1, _T("È·¶¨"), wxPoint(56,90), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
-	Button2 = new wxButton(Panel1, ID_BUTTON2, _T("È¡Ïû"), wxPoint(152,90), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
+	StaticText1 = new wxStaticText(Panel1, ID_STATICTEXT1, _T("æ–‡ä»¶åå‰ç¼€ï¼š"), wxPoint(32,35), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+	Button1 = new wxButton(Panel1, ID_BUTTON1, _T("ç¡®å®š"), wxPoint(56,90), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
+	Button2 = new wxButton(Panel1, ID_BUTTON2, _T("å–æ¶ˆ"), wxPoint(152,90), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
 	TextCtrl_FilePrefix = new wxTextCtrl(Panel1, ID_TEXTCTRL1, wxEmptyString, wxPoint(114,31), wxSize(152,21), 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
-	TextCtrl_FilePrefix->SetToolTip(_T("²»Òª°üº¬  \\  /  :  *  \?  \"  <  >  | "));
-	m_cbReverse = new wxCheckBox(Panel1, ID_CHECKBOX1, _T("Ö¡µ¹Ğò"), wxPoint(32,64), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+	TextCtrl_FilePrefix->SetToolTip(_T("ä¸è¦åŒ…å«  \\  /  :  *  \?  \"  <  >  | "));
+	m_cbReverse = new wxCheckBox(Panel1, ID_CHECKBOX1, _T("å¸§å€’åº"), wxPoint(32,64), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
 	m_cbReverse->SetValue(false);
 
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&ExportToImg::OnButton1Click);

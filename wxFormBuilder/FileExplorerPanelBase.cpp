@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////
+ï»¿///////////////////////////////////////////////////////////////////////////
 // C++ code generated with wxFormBuilder (version Jun  5 2014)
 // http://www.wxformbuilder.org/
 //
@@ -26,7 +26,7 @@ FileExplorerPanelBase::FileExplorerPanelBase( wxWindow* parent, wxWindowID id, c
 	bSizer2->Add( m_genericDirCtrl1, 1, wxEXPAND | wxALL, 0 );
 	
 	mcb_Fileter = new wxComboBox( m_panel1, wxID_ANY, wxT("Combo!"), wxDefaultPosition, wxDefaultSize, 0, NULL, wxCB_READONLY );
-	mcb_Fileter->Append( wxT("ËùÓÐÎÄ¼þ") );
+	mcb_Fileter->Append( wxT("æ‰€æœ‰æ–‡ä»¶") );
 	mcb_Fileter->Append( wxT("MPC ASF SPR RPC") );
 	mcb_Fileter->Append( wxT("MPC") );
 	mcb_Fileter->Append( wxT("ASF") );

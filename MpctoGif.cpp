@@ -1,4 +1,4 @@
-#include "wx/log.h"
+ï»¿#include "wx/log.h"
 #include "wx/stream.h"
 #include "wx/mstream.h"
 #include "wx/filename.h"
@@ -90,27 +90,27 @@ bool CovMpctoPic::Save(FileType type, bool ShdIncluded, long direction, long int
         if(type == T_GIF)
         {
             if(!data.SaveToGif(outFilePath)) return false;
-            wxMessageBox(wxT("GIFÎÄ¼şÒÑ±£´æ"));
+            wxMessageBox(wxT("GIFæ–‡ä»¶å·²ä¿å­˜"));
             return true;
         }
         else if(type == T_PNG)
         {
             wxString infilename = wxFileName::FileName(inFilePath).GetName();
             if(!data.SaveToPng(outFilePath+wxFileName::GetPathSeparator()+infilename)) return false;
-            wxMessageBox(wxT("PNGÎÄ¼şÒÑ±£´æ"));
+            wxMessageBox(wxT("PNGæ–‡ä»¶å·²ä¿å­˜"));
             return true;
         }
         else if(type == T_MPC)
         {
             if(!data.SaveToMpc(outFilePath, direction, interval, bottom, makeshadow)) return false;
-            wxMessageBox(wxT("MPCÎÄ¼şÒÑ±£´æ"));
+            wxMessageBox(wxT("MPCæ–‡ä»¶å·²ä¿å­˜"));
             return true;
         }
         else if(type == T_ASF)
         {
             if(!data.SaveToAsf(outFilePath, direction, interval, bottom, left, makeshadow,
                                offsetsunx, offsetsuny, offsetposx, offsetposy)) return false;
-            wxMessageBox(wxT("ASFÎÄ¼şÒÑ±£´æ"));
+            wxMessageBox(wxT("ASFæ–‡ä»¶å·²ä¿å­˜"));
             return true;
         }
     }

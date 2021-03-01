@@ -1,4 +1,4 @@
-#include "ResizeDialog.h"
+ï»¿#include "ResizeDialog.h"
 
 //(*InternalHeaders(ResizeDialog)
 #include <wx/string.h>
@@ -30,24 +30,24 @@ ResizeDialog::ResizeDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,con
     wxBoxSizer* BoxSizer1;
     wxBoxSizer* BoxSizer3;
 
-    Create(parent, id, _T("Ëõ·ÅÍ¼Æ¬"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
+    Create(parent, id, _T("ç¼©æ”¾å›¾ç‰‡"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
     SetClientSize(wxSize(435,155));
     Move(wxDefaultPosition);
     BoxSizer1 = new wxBoxSizer(wxVERTICAL);
     BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _T("¿í£º    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+    StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _T("å®½ï¼š    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     BoxSizer2->Add(StaticText1, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     msc_Width = new wxSpinCtrl(this, ID_SPINCTRL1, _T("0"), wxDefaultPosition, wxDefaultSize, 0, 1, 99999, 0, _T("ID_SPINCTRL1"));
     msc_Width->SetValue(_T("0"));
     BoxSizer2->Add(msc_Width, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _T("¸ß£º    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+    StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _T("é«˜ï¼š    "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     BoxSizer2->Add(StaticText2, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     msc_Height = new wxSpinCtrl(this, ID_SPINCTRL2, _T("0"), wxDefaultPosition, wxDefaultSize, 0, 1, 99999, 0, _T("ID_SPINCTRL2"));
     msc_Height->SetValue(_T("0"));
     BoxSizer2->Add(msc_Height, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer1->Add(BoxSizer2, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-    StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _T("±ÈÀý£º"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+    StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _T("æ¯”ä¾‹ï¼š"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
     BoxSizer3->Add(StaticText3, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     msc_Percent = new wxSpinCtrl(this, ID_SPINCTRL3, _T("100"), wxDefaultPosition, wxDefaultSize, 0, 1, 9999, 100, _T("ID_SPINCTRL3"));
     msc_Percent->SetValue(_T("100"));
@@ -55,14 +55,14 @@ ResizeDialog::ResizeDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,con
     StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _T("%"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
     BoxSizer3->Add(StaticText4, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer3->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    mcb_KeepRatio = new wxCheckBox(this, ID_CHECKBOX1, _T("±£³Ö³¤¿í±È"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+    mcb_KeepRatio = new wxCheckBox(this, ID_CHECKBOX1, _T("ä¿æŒé•¿å®½æ¯”"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
     mcb_KeepRatio->SetValue(true);
     BoxSizer3->Add(mcb_KeepRatio, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer1->Add(BoxSizer3, 1, wxALL|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
-    mb_Ok = new wxButton(this, ID_BUTTON1, _T("È·¶¨"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
+    mb_Ok = new wxButton(this, ID_BUTTON1, _T("ç¡®å®š"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
     BoxSizer4->Add(mb_Ok, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    mb_Cancle = new wxButton(this, ID_BUTTON2, _T("È¡Ïû"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
+    mb_Cancle = new wxButton(this, ID_BUTTON2, _T("å–æ¶ˆ"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
     BoxSizer4->Add(mb_Cancle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     BoxSizer1->Add(BoxSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     SetSizer(BoxSizer1);
