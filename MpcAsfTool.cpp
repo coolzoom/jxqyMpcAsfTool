@@ -659,6 +659,7 @@ void MpcAsfTool::OnNew(wxCommandEvent &event)
 }
 void MpcAsfTool::OnFileOpen(wxCommandEvent &event)
 {
+    //菜单打开asf文件
     ReNewFocus();
 
     if(!ChangeSaved()) return;
@@ -674,6 +675,7 @@ void MpcAsfTool::OnFileOpen(wxCommandEvent &event)
 }
 bool MpcAsfTool::DragOpenFile(const wxArrayString &files)
 {
+    //拖放打开asf文件
     ReNewFocus();
 
     if(!ChangeSaved() || files.IsEmpty()) return false;
@@ -682,6 +684,7 @@ bool MpcAsfTool::DragOpenFile(const wxArrayString &files)
 }
 bool MpcAsfTool::OpenFile(const wxString path)
 {
+    //打开asf文件
     bool res;
 
     prevsunx = 0;
@@ -731,12 +734,14 @@ bool MpcAsfTool::OpenFile(const wxString path)
 }
 void MpcAsfTool::OnFileSave(wxCommandEvent &event)
 {
+    //菜单打开asf文件
     ReNewFocus();
 
     SaveFile();
 }
 void MpcAsfTool::OnFileSaveAs(wxCommandEvent &event)
 {
+    //菜单另存asf文件
     ReNewFocus();
 
     SaveFile(false);
@@ -812,6 +817,7 @@ void MpcAsfTool::OnExportToPng(wxCommandEvent &event)
 }
 void MpcAsfTool::OnBat(wxCommandEvent &event)
 {
+    //coolzoom 批量导出文件
     BatDialog batdlg(this);
 
     if(batdlg.ShowModal() == wxID_OK)
@@ -1122,6 +1128,7 @@ void MpcAsfTool::ResizeAll(WorkManager *manager, int toWidth, int toHeight)
 
 void MpcAsfTool::Resize(wxCommandEvent& event)
 {
+    //缩放所有asf图片
     ResizeDialog dialog(this);
     dialog.SetCurrentWidth(manager.GetGlobalWidth());
     dialog.SetCurrentHeight(manager.GetGlobalHeight());
@@ -1140,6 +1147,7 @@ void MpcAsfTool::Resize(wxCommandEvent& event)
 
 void MpcAsfTool::ResizeCurrent(wxCommandEvent& event)
 {
+    //缩放当前asf图片
     ResizeDialog dialog(this);
     dialog.SetCurrentWidth(manager.GetGlobalWidth());
     dialog.SetCurrentHeight(manager.GetGlobalHeight());
@@ -1172,6 +1180,7 @@ void MpcAsfTool::OnAbout(wxCommandEvent &event)
 }
 void MpcAsfTool::OnButton1Click(wxCommandEvent& event)
 {
+    //给asf添加图片
     wxFileDialog filedlg(this, wxT("选择多个图片文件"), wxT(""), wxT(""),
                          wxT("图片文件(*.spr,*.png,*gif,*bmp,*.jpg,*.tif,*.ico,*.psd)|*.spr;*.png;*.gif;*.bmp;*.jpg;*.tif;*.ico;*.psd|\
 SPR(剑网、剑侠世界图片资源文件)|*.spr|PNG|*.png|GIF|*.gif|BMP|*.bmp|JPG|*.jpg|TIFF|*.tif|ICO|*.ico|PSD|*.psd|所有文件|*.*"),
@@ -1483,6 +1492,7 @@ bool MpcAsfTool::SaveFile(bool CurrentFile)
 
         if(ext.CmpNoCase(wxT("asf")) == 0)
         {
+            //保存asf文件
             if(!manager.SaveToAsf(currentfile))
             {
                 wxMessageBox(wxT("文件保存失败！"), wxT("错误"), wxOK|wxICON_ERROR);
@@ -1692,6 +1702,7 @@ void MpcAsfTool::OnSpinCtrl_Frame_GotoChange(wxSpinEvent& event)
 
 void MpcAsfTool::OnButton_DeleteCurrentFrameClick(wxCommandEvent& event)
 {
+    //asf删掉当前帧
     if(manager.DeleteFrame((unsigned long)Slider_Frame->GetValue()-1))
     {
         if(currentframeindex > 1)currentframeindex--;
