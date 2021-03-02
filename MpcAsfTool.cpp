@@ -916,7 +916,7 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
                             {
                                 if(conv.DeleteFrame((unsigned long)conv.GetFrameCounts()-1))
                                 {
-                                    wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
+                                    //wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
                                 }
                             }
 
