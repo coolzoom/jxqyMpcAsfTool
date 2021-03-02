@@ -778,6 +778,7 @@ void MpcAsfTool::OnExportToGif(wxCommandEvent &event)
 }
 void MpcAsfTool::OnExportToPng(wxCommandEvent &event)
 {
+    //导出图片到PNG
     ReNewFocus();
 
     if (manager.GetFrameCounts() == 0)
@@ -906,6 +907,37 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
                     }
                     else if(batdlg.isAsf())
 					{
+					    //get frames count
+					    unsigned long framecounts;
+					    framecounts = manager.GetFrameCounts();
+
+					    //删除所有帧
+					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
+                        {
+                            if(manager.DeleteFrame((unsigned long)manager.GetFrameCounts()-1))
+                            {
+                                wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
+                            }
+                        }
+
+					    //从输出文件夹找到高清图片插入
+					    wxArrayString infiles;
+                        infiles.clear();
+					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
+                        {
+                           infiles.Add(outpath+filename + wxString::Format(wxT("-%03ld.png"), frmi+1));
+                        }
+                        wxArrayString errfiles = manager.AddFiles(infiles);
+                        if(!errfiles.IsEmpty())
+                        {
+                            wxString errstr = wxT("以下文件添加失败:\n\n");
+                            for(size_t i = 0; i < errfiles.GetCount(); i++)
+                            {
+                                errstr += errfiles[i];
+                                errstr += wxT("\n");
+                            }
+                            wxMessageBox(errstr, wxT("错误"), wxOK|wxICON_ERROR);
+                        }
 
 						if(!conv.SaveToAsf(outpath+filename+wxT(".asf")))
 						{
@@ -1039,23 +1071,15 @@ void MpcAsfTool::OnBatGenerate(wxCommandEvent &event)
                     else if(batdlg.isAsf())
 					{
 					    //这里应该就可以处理了
-
+                        wxMessageBox(wxString::Format(wxT(" asf 文件图像总计: %d"), manager.GetFrameCounts() ), wxT("信息"), wxOK);
 					    //只处理只有一帧图像的文件
 					    if((int)manager.GetFrameCounts() == 1)
                         {
+                            wxMessageBox(wxT("开始处理文件"), wxT("信息"), wxOK);
                             //删除所有帧
-                            if(manager.DeleteFrame((unsigned long)Slider_Frame->GetValue()-1))
+                            if(manager.DeleteFrame((unsigned long)manager.GetFrameCounts()-1))
                             {
-                                if(currentframeindex > 1)currentframeindex--;
-                                SetLockState();
-                                RefreshFrameSlide();
-                                RefreshBmpShow();
-                                if(isplay)
-                                {
-                                    StopAnimate();
-                                    BeginAnimate();
-                                }
-                                SetStateChange(true);
+                                wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
                             }
 
                             //获取文件并插入
@@ -1074,21 +1098,15 @@ void MpcAsfTool::OnBatGenerate(wxCommandEvent &event)
                                 }
                                 wxMessageBox(errstr, wxT("错误"), wxOK|wxICON_ERROR);
                             }
-                            if(manager.GetFrameCounts() == 0)InitFromManager();
-                            RefreshFrameSlide();
-                            RefreshBmpShow();
-                            if(isplay)
-                            {
-                                StopAnimate();
-                                BeginAnimate();
-                            }
-                            if(!infiles.IsEmpty()) SetStateChange(true);
-                            //报存当前文件
+
+                            //保存当前文件
 
                             if(!conv.SaveToAsf(outpath+filename+wxT(".asf")))
                             {
                                 errs.Add(files[j]);
                             }
+
+                            wxMessageBox(wxT("保存成功"), wxT("信息"), wxOK);
 
                         }
 
