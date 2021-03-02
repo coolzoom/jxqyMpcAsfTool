@@ -905,44 +905,48 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
                     }
                     else if(batdlg.isAsf())
 					{
-					    //get frames count
-					    unsigned long framecounts;
-					    framecounts = conv.GetFrameCounts();
+					    if(batdlg.isNewPNG())
+                        {
+                            //get frames count
+                            unsigned long framecounts;
+                            framecounts = conv.GetFrameCounts();
 
-					    //删除所有帧
-					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
-                        {
-                            if(conv.DeleteFrame((unsigned long)conv.GetFrameCounts()-1))
+                            //删除所有帧
+                            for(unsigned long frmi = 0; frmi < framecounts; frmi++)
                             {
-                                wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
+                                if(conv.DeleteFrame((unsigned long)conv.GetFrameCounts()-1))
+                                {
+                                    wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
+                                }
+                            }
+
+                            //从输出文件夹找到高清图片插入
+                            wxArrayString infiles;
+                            infiles.clear();
+                            for(unsigned long frmi = 0; frmi < framecounts; frmi++)
+                            {
+                                if(framecounts == 1)
+                                {
+                                    infiles.Add(outpath+filename+wxT(".png"));
+                                }
+                                else
+                                {
+                                    infiles.Add(outpath+filename+wxString::Format(wxT("-%03ld.png"), frmi+1));
+                                }
+                            }
+                            wxArrayString errfiles = conv.AddFiles(infiles);
+                            if(!errfiles.IsEmpty())
+                            {
+                                wxString errstr = wxT("以下文件添加失败:\n\n");
+                                for(size_t i = 0; i < errfiles.GetCount(); i++)
+                                {
+                                    errstr += errfiles[i];
+                                    errstr += wxT("\n");
+                                }
+                                wxMessageBox(errstr, wxT("错误"), wxOK|wxICON_ERROR);
                             }
                         }
 
-					    //从输出文件夹找到高清图片插入
-					    wxArrayString infiles;
-                        infiles.clear();
-					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
-                        {
-                            if(framecounts == 1)
-                            {
-                                infiles.Add(outpath+filename+wxT(".png"));
-                            }
-                            else
-                            {
-                                infiles.Add(outpath+filename+wxString::Format(wxT("-%03ld.png"), frmi+1));
-                            }
-                        }
-                        wxArrayString errfiles = conv.AddFiles(infiles);
-                        if(!errfiles.IsEmpty())
-                        {
-                            wxString errstr = wxT("以下文件添加失败:\n\n");
-                            for(size_t i = 0; i < errfiles.GetCount(); i++)
-                            {
-                                errstr += errfiles[i];
-                                errstr += wxT("\n");
-                            }
-                            wxMessageBox(errstr, wxT("错误"), wxOK|wxICON_ERROR);
-                        }
 
 						if(!conv.SaveToAsf(outpath+filename+wxT(".asf")))
 						{

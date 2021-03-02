@@ -29,6 +29,7 @@ const long BatDialog::ID_RADIOBUTTON4 = wxNewId();
 const long BatDialog::ID_SPINCTRL4 = wxNewId();
 const long BatDialog::ID_STATICTEXT6 = wxNewId();
 const long BatDialog::ID_STATICTEXT7 = wxNewId();
+const long BatDialog::ID_CHECKBOXNEWPNG = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(BatDialog,wxDialog)
@@ -40,7 +41,7 @@ BatDialog::BatDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 {
 	//(*Initialize(BatDialog)
 	Create(parent, wxID_ANY, _T("图片批量导出"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
-	SetClientSize(wxSize(400,405));
+	SetClientSize(wxSize(515,405));
 	RichTextCtrl_List = new wxRichTextCtrl(this, ID_RICHTEXTCTRL1, wxEmptyString, wxPoint(8,16), wxSize(288,240), wxRE_MULTILINE, wxDefaultValidator, _T("ID_RICHTEXTCTRL1"));
 	wxRichTextAttr rchtxtAttr_1;
 	rchtxtAttr_1.SetBulletStyle(wxTEXT_ATTR_BULLET_STYLE_ALIGN_LEFT);
@@ -72,6 +73,9 @@ BatDialog::BatDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 	SpinCtrl_Scale->SetValue(_T("100"));
 	StaticText6 = new wxStaticText(this, ID_STATICTEXT6, _T("缩放："), wxPoint(34,340), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
 	StaticText7 = new wxStaticText(this, ID_STATICTEXT7, _T("%"), wxPoint(176,340), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
+	CheckBoxNewPNG = new wxCheckBox(this, ID_CHECKBOXNEWPNG, _T("重新导入图片"), wxPoint(368,224), wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOXNEWPNG"));
+	CheckBoxNewPNG->SetValue(false);
+	CheckBoxNewPNG->SetToolTip(_T("PNG序列图按照导出名字放在输出目录"));
 
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&BatDialog::OnButton_AddClick);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&BatDialog::OnButton_EmptyClick);
@@ -127,5 +131,9 @@ void BatDialog::OnRadioButton_GifSelect(wxCommandEvent& event)
 }
 
 void BatDialog::OnRadioButton_PngSelect(wxCommandEvent& event)
+{
+}
+
+void BatDialog::OnCheckBox_isShdClick(wxCommandEvent& event)
 {
 }

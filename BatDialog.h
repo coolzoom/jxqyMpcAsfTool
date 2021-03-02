@@ -2,14 +2,14 @@
 #define BATDIALOG_H
 
 //(*Headers(BatDialog)
-#include <wx/stattext.h>
+#include <wx/button.h>
 #include <wx/checkbox.h>
-#include <wx/spinctrl.h>
+#include <wx/clrpicker.h>
+#include <wx/dialog.h>
 #include <wx/radiobut.h>
 #include <wx/richtext/richtextctrl.h>
-#include <wx/button.h>
-#include <wx/dialog.h>
-#include <wx/clrpicker.h>
+#include <wx/spinctrl.h>
+#include <wx/stattext.h>
 //*)
 
 class BatDialog: public wxDialog
@@ -22,28 +22,29 @@ class BatDialog: public wxDialog
 	private:
 
 		//(*Declarations(BatDialog)
-		wxCheckBox* CheckBox_isShd;
-		wxSpinCtrl* SpinCtrl_FrameEnd;
-		wxButton* Button_Ok;
-		wxRadioButton* RadioButton_Gif;
-		wxStaticText* StaticText2;
-		wxSpinCtrl* SpinCtrl_FrameBegin;
-		wxStaticText* StaticText6;
-		wxRichTextCtrl* RichTextCtrl_List;
-		wxRadioButton* RadioButton_Asf;
-		wxRadioButton* RadioButton_Mpc;
-		wxButton* Button_Cancle;
-		wxStaticText* StaticText1;
-		wxButton* Button_Empty;
-		wxStaticText* StaticText3;
-		wxColourPickerCtrl* ColourPickerCtrl_BaseColor;
-		wxStaticText* StaticText5;
-		wxStaticText* StaticText7;
-		wxSpinCtrl* SpinCtrl_Scale;
-		wxSpinCtrl* SpinCtrl_AlphaMask;
 		wxButton* Button_Add;
-		wxStaticText* StaticText4;
+		wxButton* Button_Cancle;
+		wxButton* Button_Empty;
+		wxButton* Button_Ok;
+		wxCheckBox* CheckBoxNewPNG;
+		wxCheckBox* CheckBox_isShd;
+		wxColourPickerCtrl* ColourPickerCtrl_BaseColor;
+		wxRadioButton* RadioButton_Asf;
+		wxRadioButton* RadioButton_Gif;
+		wxRadioButton* RadioButton_Mpc;
 		wxRadioButton* RadioButton_Png;
+		wxRichTextCtrl* RichTextCtrl_List;
+		wxSpinCtrl* SpinCtrl_AlphaMask;
+		wxSpinCtrl* SpinCtrl_FrameBegin;
+		wxSpinCtrl* SpinCtrl_FrameEnd;
+		wxSpinCtrl* SpinCtrl_Scale;
+		wxStaticText* StaticText1;
+		wxStaticText* StaticText2;
+		wxStaticText* StaticText3;
+		wxStaticText* StaticText4;
+		wxStaticText* StaticText5;
+		wxStaticText* StaticText6;
+		wxStaticText* StaticText7;
 		//*)
 
 	protected:
@@ -71,6 +72,7 @@ class BatDialog: public wxDialog
 		static const long ID_SPINCTRL4;
 		static const long ID_STATICTEXT6;
 		static const long ID_STATICTEXT7;
+		static const long ID_CHECKBOXNEWPNG;
 		//*)
 
 	public:
@@ -82,6 +84,7 @@ class BatDialog: public wxDialog
 		void OnButton_CancleClick(wxCommandEvent& event);
 		void OnRadioButton_GifSelect(wxCommandEvent& event);
 		void OnRadioButton_PngSelect(wxCommandEvent& event);
+		void OnCheckBox_isShdClick(wxCommandEvent& event);
 		//*)
 
     public:
@@ -96,6 +99,7 @@ class BatDialog: public wxDialog
         bool isAsf(){return RadioButton_Asf->GetValue();}
         float getScaleRatio(){return (float)SpinCtrl_Scale->GetValue()/(float)100;}
         bool isShd(){return CheckBox_isShd->IsChecked();}
+        bool isNewPNG(){return CheckBoxNewPNG->IsChecked();}
 		DECLARE_EVENT_TABLE()
 };
 
