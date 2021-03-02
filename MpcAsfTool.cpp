@@ -923,7 +923,14 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
                         infiles.clear();
 					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
                         {
-                           infiles.Add(outpath+filename + wxString::Format(wxT("-%03ld.png"), frmi+1));
+                            if(framecounts == 1)
+                            {
+                                infiles.Add(outpath+filename+wxT(".png"));
+                            }
+                            else
+                            {
+                                infiles.Add(outpath+filename+wxString::Format(wxT("-%03ld.png"), frmi+1));
+                            }
                         }
                         wxArrayString errfiles = conv.AddFiles(infiles);
                         if(!errfiles.IsEmpty())
