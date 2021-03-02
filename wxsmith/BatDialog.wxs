@@ -101,6 +101,7 @@
 		<object class="wxSpinCtrl" name="ID_SPINCTRL4" variable="SpinCtrl_Scale" member="yes">
 			<value>100</value>
 			<min>1</min>
+			<min>9999</min>
 			<pos>80,336</pos>
 			<size>88,21</size>
 		</object>

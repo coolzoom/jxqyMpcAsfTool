@@ -68,7 +68,7 @@ BatDialog::BatDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 	StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _T("帧范围："), wxPoint(24,307), wxDefaultSize, 0, _T("ID_STATICTEXT5"));
 	RadioButton_Mpc = new wxRadioButton(this, ID_RADIOBUTTON3, _T("MPC"), wxPoint(320,200), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON3"));
 	RadioButton_Asf = new wxRadioButton(this, ID_RADIOBUTTON4, _T("ASF"), wxPoint(320,224), wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON4"));
-	SpinCtrl_Scale = new wxSpinCtrl(this, ID_SPINCTRL4, _T("100"), wxPoint(80,336), wxSize(88,21), 0, 1, 100, 100, _T("ID_SPINCTRL4"));
+	SpinCtrl_Scale = new wxSpinCtrl(this, ID_SPINCTRL4, _T("100"), wxPoint(80,336), wxSize(88,21), 0, 1, 9999, 100, _T("ID_SPINCTRL4"));
 	SpinCtrl_Scale->SetValue(_T("100"));
 	StaticText6 = new wxStaticText(this, ID_STATICTEXT6, _T("缩放："), wxPoint(34,340), wxDefaultSize, 0, _T("ID_STATICTEXT6"));
 	StaticText7 = new wxStaticText(this, ID_STATICTEXT7, _T("%"), wxPoint(176,340), wxDefaultSize, 0, _T("ID_STATICTEXT7"));
