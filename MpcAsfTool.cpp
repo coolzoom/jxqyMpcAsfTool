@@ -909,12 +909,12 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
 					{
 					    //get frames count
 					    unsigned long framecounts;
-					    framecounts = manager.GetFrameCounts();
+					    framecounts = conv.GetFrameCounts();
 
 					    //删除所有帧
 					    for(unsigned long frmi = 0; frmi < framecounts; frmi++)
                         {
-                            if(manager.DeleteFrame((unsigned long)manager.GetFrameCounts()-1))
+                            if(conv.DeleteFrame((unsigned long)conv.GetFrameCounts()-1))
                             {
                                 wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
                             }
@@ -927,7 +927,7 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
                         {
                            infiles.Add(outpath+filename + wxString::Format(wxT("-%03ld.png"), frmi+1));
                         }
-                        wxArrayString errfiles = manager.AddFiles(infiles);
+                        wxArrayString errfiles = conv.AddFiles(infiles);
                         if(!errfiles.IsEmpty())
                         {
                             wxString errstr = wxT("以下文件添加失败:\n\n");
