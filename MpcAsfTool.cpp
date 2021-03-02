@@ -115,7 +115,6 @@ BEGIN_EVENT_TABLE(MpcAsfTool,wxFrame)
     EVT_MENU(ID_EXPORT_TO_GIF, MpcAsfTool::OnExportToGif)
     EVT_MENU(ID_EXPORT_TO_PNG, MpcAsfTool::OnExportToPng)
     EVT_MENU(ID_BAT, MpcAsfTool::OnBat)
-    EVT_MENU(ID_BATGEN, MpcAsfTool::OnBatGenerate)
     EVT_MENU(ID_SHOW_IN_FILEEXPLORERWINDOW, MpcAsfTool::OnShowFile)
     EVT_MENU(ID_SHOW_IN_EXPLOER, MpcAsfTool::OnShowFile)
     EVT_MENU(wxID_EXIT, MpcAsfTool::OnExit)
@@ -542,7 +541,6 @@ MpcAsfTool::MpcAsfTool(wxWindow* parent,wxWindowID id,const wxPoint& pos,const w
     menu_file->Append(ID_EXPORT_TO_GIF, wxT("导出为 GIF..."));
     menu_file->Append(ID_EXPORT_TO_PNG, wxT("导出为 PNG..."));
     menu_file->Append(ID_BAT, wxT("图片批量导出...\tCtrl+P"));
-    menu_file->Append(ID_BATGEN, wxT("图片放大导入...\tCtrl+G"));
     menu_file->Append(ID_SHOW_IN_FILEEXPLORERWINDOW, wxT("在文件浏览窗口显示\tCtrl+W"));
     menu_file->Append(ID_SHOW_IN_EXPLOER, wxT("打开文件所在文件夹\tCtrl+J"));
     menu_file->Append(wxID_EXIT, wxT("退出\tAlt+F4"));
@@ -943,174 +941,6 @@ void MpcAsfTool::OnBat(wxCommandEvent &event)
 						{
 							errs.Add(files[j]);
 						}
-					}
-					else if(batdlg.isMpc())
-					{
-						if(!conv.SaveToMpc(outpath+filename+wxT(".mpc")))
-						{
-							errs.Add(files[j]);
-						}
-					}
-                }
-                else errs.Add(files[j]);
-            }
-            this->SetTitle(frmt);
-            this->SetMenuBar(MenuBar_MpcAsfTool);
-            this->SetSizeHints(frmms);
-            this->SetSize(frms);
-            batpiccancle = true;
-
-            if(errs.GetCount() != 0)
-            {
-                wxString stre;
-                stre = _T("以下文件失败：\n");
-                for(size_t eri = 0; eri < errs.GetCount(); eri++)
-                {
-                    stre += errs[eri] + wxT("\n");
-                }
-                wxMessageBox(stre, wxT("消息"), wxOK|wxICON_ERROR);
-            }
-            else
-            {
-                if(!batpiccancle) wxMessageBox(_T("完成！"), _T("消息"), wxOK);
-            }
-        }
-    }
-}
-//多选文件，打开，放大到对应倍数，循环当前与文件同名的处理后的大序列图，删除原序列图然后插入
-void MpcAsfTool::OnBatGenerate(wxCommandEvent &event)
-{
-    //coolzoom 批量放大导入生成文件
-    BatDialog batdlg(this);
-
-    if(batdlg.ShowModal() == wxID_OK)
-    {
-        wxRichTextCtrl *lctl = batdlg.GetListTextCtrl();
-        int frameBegin = batdlg.GetFrameBegin();
-        int frameEnd = batdlg.GetFrameEnd();
-        wxArrayString files, errs;
-        int filecounts;
-        wxString filename,outpath,temp;
-        WorkManager conv;
-
-        wxDirDialog dirdlg(this, wxT("选择生成文件夹"), wxT(""));
-        if(dirdlg.ShowModal() != wxID_OK) return;
-        outpath = dirdlg.GetPath() + wxFileName::GetPathSeparator();
-
-        filecounts = lctl->GetNumberOfLines();
-        for(int i = 0; i < filecounts; i++)
-        {
-            temp = lctl->GetLineText((long)i);
-            temp.Trim(true);
-            temp.Trim(false);
-            if(!temp.IsEmpty())
-            {
-                files.Add(temp);
-            }
-        }
-
-		float ratio = batdlg.getScaleRatio();
-        filecounts = (int)files.GetCount();
-        if(filecounts != 0)
-        {
-            batpiccancle = false;
-
-            wxString frmt = this->GetTitle();
-            wxSize frms = this->GetSize();
-            wxSize frmms = this->GetMinSize();
-            wxSize frmcs = this->GetClientSize();
-            this->SetSizeHints(wxSize(0,0),
-                               wxSize(frms.GetWidth(), frms.GetHeight() - frmcs.GetHeight()));
-            this->SetSize(frms.GetWidth(), frms.GetHeight() - frmcs.GetHeight());
-            this->SetMenuBar(MenuBar_BatPicConv);
-            for(int j = 0; j < filecounts; j++)
-            {
-                if(batpiccancle) break;
-
-                this->SetTitle(frmt+wxString::Format(wxT(" - 正在转换: %d/%d"), filecounts, j));
-                wxTheApp->Yield(true);
-
-                //打开文件
-                conv.ReNew();
-                conv.SetShdIncluded(batdlg.isShd());
-                conv.SetBaseColor(batdlg.GetBaseColor());
-                conv.SetAlphaMask(batdlg.GetAlphaMask());
-                bool result = conv.OpenFile(files[j], frameBegin, frameEnd);
-                if(!result)
-				{
-					wxArrayString picfile;
-					picfile.Add(files[j]);
-					wxArrayString out = conv.AddFiles(picfile);
-					result = out.IsEmpty();
-				}
-                if(result)
-                {
-                	if(ratio != 1)
-					{
-                        //放大所有帧到指定倍数
-						ResizeAll(&conv,
-								(int)(ratio*conv.GetGlobalWidth()),
-								(int)(ratio*conv.GetGlobalHeight()));
-					}
-
-                    filename = wxFileName::FileName(files[j]).GetName();
-                    if(batdlg.isGif())
-                    {
-                        if(!conv.SaveToGif(outpath+filename+wxT(".gif")))
-                        {
-                            errs.Add(files[j]);
-                        }
-                    }
-                    else if(batdlg.isPng())
-                    {
-                        if(!conv.SaveToPng(outpath+filename))
-                        {
-                            errs.Add(files[j]);
-                        }
-                    }
-                    else if(batdlg.isAsf())
-					{
-					    //这里应该就可以处理了
-                        wxMessageBox(wxString::Format(wxT(" asf 文件图像总计: %d"), manager.GetFrameCounts() ), wxT("信息"), wxOK);
-					    //只处理只有一帧图像的文件
-					    if((int)manager.GetFrameCounts() == 1)
-                        {
-                            wxMessageBox(wxT("开始处理文件"), wxT("信息"), wxOK);
-                            //删除所有帧
-                            if(manager.DeleteFrame((unsigned long)manager.GetFrameCounts()-1))
-                            {
-                                wxMessageBox(wxT("删除帧成功"), wxT("信息"), wxOK);
-                            }
-
-                            //获取文件并插入
-                            wxArrayString infiles;
-                            infiles.clear();
-                            //从输出目录获取png文件
-                            infiles.Add(outpath+filename+wxT(".png"));
-                            wxArrayString errfiles = manager.AddFiles(infiles);
-                            if(!errfiles.IsEmpty())
-                            {
-                                wxString errstr = wxT("以下文件添加失败:\n\n");
-                                for(size_t i = 0; i < errfiles.GetCount(); i++)
-                                {
-                                    errstr += errfiles[i];
-                                    errstr += wxT("\n");
-                                }
-                                wxMessageBox(errstr, wxT("错误"), wxOK|wxICON_ERROR);
-                            }
-
-                            //保存当前文件
-
-                            if(!conv.SaveToAsf(outpath+filename+wxT(".asf")))
-                            {
-                                errs.Add(files[j]);
-                            }
-
-                            wxMessageBox(wxT("保存成功"), wxT("信息"), wxOK);
-
-                        }
-
-
 					}
 					else if(batdlg.isMpc())
 					{
